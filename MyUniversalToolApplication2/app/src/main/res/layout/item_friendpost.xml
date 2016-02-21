@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/col_ffffff"
+    android:layout_marginTop="@dimen/layout_margin_s">
+
+    <ImageView
+        android:id="@+id/friendpostfragment_item_iv_avater"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="@dimen/fab_margin_s"
+        android:src="@drawable/img_wechat" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/friendpostfragment_item_iv_avater"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/friendpostfragment_item_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name" />
+
+        <TextView
+            android:id="@+id/friendpostfragment_item_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/friendpostfragment_item_tv_name"
+            android:text="contentXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
+        <GridView
+            android:id="@+id/friendpostfragment_item_gv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin_top_s"
+            android:columnWidth="60dp"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:numColumns="3"
+            android:verticalSpacing="2dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time" />
+
+            <LinearLayout
+                android:id="@+id/friendpostfragment_item_ll_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="@dimen/fab_margin_s"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/love" />
+
+                <TextView
+                    android:id="@+id/friendpostfragment_item_tv_likeNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin_s"
+                    android:text="233" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/friendpostfragment_item_ll_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin_s"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@id/friendpostfragment_item_ll_like">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/img_wechat" />
+
+                <TextView
+                    android:id="@+id/friendpostfragment_item_tv_commentNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin_s"
+                    android:text="11" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

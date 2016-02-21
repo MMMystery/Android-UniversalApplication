@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.example.administrator.myuniversaltoolapplication"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    //leakcanary的引入
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+    //Fresco的引入，暂时不行，因为被墙
+    //    compile 'com.facebook.fresco:fresco:0.8.1+'
+    //PhotoView的引入
+    //    compile 'com.commit451:PhotoView:1.2.4'
+    //logger的引用
+    compile 'com.orhanobut:logger:1.3'
+    //okhttp需要这两引入
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.squareup.okio:okio:1.6.0'
+    //gson的引入
+    compile 'com.google.code.gson:gson:2.3.1'
+    //Bmob的android sdk包
+    compile 'cn.bmob.android:bmob-sdk:3.4.5'
+    //Picasso的引入
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //xRecycleView的引入
+    compile 'com.jcodecraeer:xrecyclerview:1.2.6'
+    //FlycoDialog的引入
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.2.6@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //volley的jar包导入
+    compile files('libs/Volley.jar')
+    //引入融云IMKit工具包
+    compile project(':IMKit')
+}

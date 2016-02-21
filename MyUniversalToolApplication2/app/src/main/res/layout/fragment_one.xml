@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.OneFragment"
+    android:background="@color/col_eeeeee"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        layout="@layout/topbar_base"
+        />
+
+    <!--融云会话列表-->
+    <fragment
+        android:id="@+id/conversationlist"
+        android:name="io.rong.imkit.fragment.ConversationListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/col_eeeeee"
+         />
+
+</LinearLayout>

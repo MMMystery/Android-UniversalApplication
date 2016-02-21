@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ThreeFragment"
+    android:background="@color/col_eeeeee"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        layout="@layout/topbar_base"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/fragment_three_ll_discover"
+        android:background="@color/col_ffffff"
+        android:layout_marginTop="@dimen/layout_margin_m"
+        android:padding="@dimen/layout_pading_s">
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="@dimen/fab_margin_left_s"
+            android:id="@+id/fragment_three_iv_wexin1"
+            android:src="@drawable/img_wechat"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin_m"
+            android:text="发现圈"/>
+    </LinearLayout>
+
+</LinearLayout>

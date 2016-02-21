@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/col_eeeeee"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.myuniversaltoolapplication.ui.activity.DiscoverActivity">
+
+    <include layout="@layout/topbar_base" />
+
+    <EditText
+        android:id="@+id/newpostActivity_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="top|left"
+        android:hint="填写帖子内容" />
+    <ImageView
+        android:id="@+id/newpostActivity_iv_photo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/rc_img_camera"/>
+
+    <Button
+        android:id="@+id/newpostActivity_bt_addphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加照片"/>
+</LinearLayout>

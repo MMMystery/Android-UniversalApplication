@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/col_eeeeee"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.myuniversaltoolapplication.ui.activity.DiscoverActivity">
+
+    <include layout="@layout/topbar_base" />
+
+    <RadioGroup
+        android:id="@+id/discoveractivity_rg_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/fab_padding_s"
+        android:background="@color/col_ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/discoveractivity_rb_friendpost"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:background="@drawable/select_discoveractivity_friend_and_hot"
+            android:paddingBottom="@dimen/fab_margin_bottom_s"
+            android:text="好友" />
+
+        <RadioButton
+            android:id="@+id/discoveractivity_rb_hotpost"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:background="@drawable/select_discoveractivity_friend_and_hot"
+            android:paddingBottom="@dimen/fab_margin_bottom_s"
+            android:text="热门" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/discoveractivity_vp_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

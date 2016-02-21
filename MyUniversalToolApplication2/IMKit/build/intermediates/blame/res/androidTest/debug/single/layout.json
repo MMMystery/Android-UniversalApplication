@@ -1,0 +1,498 @@
+[
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_list.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ui_voice_cover.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ui_voice_cover.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_albums.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_albums.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_selected_pictrue.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_selected_pictrue.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_plugins.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_camera.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_camera.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_sub_list.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_rich_content_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_location_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_location_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo2.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo2.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_preview_fragment.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_test.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_test.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_albums.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_albums.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_preview.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_preview.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_ext_pager.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_ext_pager.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_image_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_image_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_calledside_layout.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_calledside_layout.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_notification_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_search.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_albums.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_albums.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_test.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_test.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_app_service_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo2.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo2.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_base_conversation.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_search.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_notification_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_progress.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_progress.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_inf.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_input.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_input.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block_popup.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_provider.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notification_loading.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notification_loading.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_text_btn.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation_member.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notice.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notice.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_albums.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_albums.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_search.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversationlist.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_group_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_information_notification_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ui_voice_cover.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ui_voice_cover.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_ext_pager.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_ext_pager.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_system_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_preview_fragment.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_search.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_text_btn.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_webview.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_webview.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation_member_list.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_voice_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_popup.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_plugins.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation_member_list.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_rich_content_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_dialog_alter.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_emoji_grid.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_emoji_grid.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_preview.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_preview.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fragment_base_setting.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_base_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_inf.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_emoji_grid.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_emoji_grid.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messageinput.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_rich_content_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_txt_provider.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menus.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_activity.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_activity.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notification_loading.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notification_loading.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messagelist.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu_item.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu_item.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_system_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversationlist.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_activity.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_activity.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation_member.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_progress.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_progress.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_callside_layout.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_callside_layout.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_camera.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_camera.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_emoji_txt.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_emoji_txt.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messageinput.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_dialog_alter.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_image_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_image_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notice.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notice.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_calledside_layout.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_calledside_layout.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fragment_base_setting.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_app_service_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_conversation.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_group_conversation.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_conversation.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_webview.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_webview.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_rich_content_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_popup.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_callside_layout.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_callside_layout.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_information_notification_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_txt_provider.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_voice_message.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_selected_pictrue.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_selected_pictrue.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messagelist.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menus.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_provider.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block_popup.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_location_message.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_location_message.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_input.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_input.xml"
+    },
+    {
+        "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo.xml",
+        "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_list.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_sub_list.xml"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_emoji_txt.xml",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_emoji_txt.xml"
+    }
+]

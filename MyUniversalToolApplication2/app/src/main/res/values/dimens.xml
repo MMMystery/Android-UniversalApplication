@@ -1,0 +1,62 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!--margin-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="fab_margin_s">8dp</dimen>
+    <dimen name="fab_margin_m">16dp</dimen>
+    <dimen name="fab_margin_l">32dp</dimen>
+
+
+    <dimen name="fab_margin_left_s">8dp</dimen>
+    <dimen name="fab_margin_left_m">16dp</dimen>
+    <dimen name="fab_margin_left_l">32dp</dimen>
+
+    <dimen name="fab_margin_right_s">8dp</dimen>
+    <dimen name="fab_margin_right_m">16dp</dimen>
+    <dimen name="fab_margin_right_l">32dp</dimen>
+
+    <dimen name="fab_margin_top_s">8dp</dimen>
+    <dimen name="fab_margin_top_m">16dp</dimen>
+    <dimen name="fab_margin_top_l">32dp</dimen>
+
+    <dimen name="fab_margin_bottom_s">8dp</dimen>
+    <dimen name="fab_margin_bottom_m">16dp</dimen>
+    <dimen name="fab_margin_bottom_l">32dp</dimen>
+
+    <dimen name="layout_margin_s">8dp</dimen>
+    <dimen name="layout_margin_m">16dp</dimen>
+    <dimen name="layout_margin_l">32dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--pading-->
+    <dimen name="activity_horizontal_padding">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
+
+    <dimen name="fab_padding_s">8dp</dimen>
+    <dimen name="fab_padding_m">16dp</dimen>
+    <dimen name="fab_padding_l">32dp</dimen>
+
+    <dimen name="fab_padding_left_s">8dp</dimen>
+    <dimen name="fab_padding_left_m">16dp</dimen>
+    <dimen name="fab_padding_left_l">32dp</dimen>
+
+    <dimen name="fab_padding_right_s">8dp</dimen>
+    <dimen name="fab_padding_right_m">16dp</dimen>
+    <dimen name="fab_padding_right_l">32dp</dimen>
+
+    <dimen name="fab_padding_top_s">8dp</dimen>
+    <dimen name="fab_padding_top_m">16dp</dimen>
+    <dimen name="fab_padding_top_l">32dp</dimen>
+
+    <dimen name="fab_padding_bottom_s">8dp</dimen>
+    <dimen name="fab_padding_bottom_m">16dp</dimen>
+    <dimen name="fab_padding_bottom_l">32dp</dimen>
+
+    <dimen name="layout_pading_s">8dp</dimen>
+    <dimen name="layout_pading_m">16dp</dimen>
+    <dimen name="layout_pading_l">32dp</dimen>
+
+</resources>

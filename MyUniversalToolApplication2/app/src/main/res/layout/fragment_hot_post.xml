@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.HotPostFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <com.jcodecraeer.xrecyclerview.XRecyclerView
+       android:id="@+id/friendhotfragment_rv_recyclerview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+</FrameLayout>
