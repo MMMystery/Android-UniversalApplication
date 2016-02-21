@@ -712,12 +712,12 @@
         "source": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\rc_call_answer_down.png"
     },
     {
-        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\u1f381.png",
-        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\u1f381.png"
-    },
-    {
         "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\u1f384.png",
         "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\u1f384.png"
+    },
+    {
+        "merged": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\u1f381.png",
+        "source": "F:\\SourceTree_MyUniversalToolApplication\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\u1f381.png"
     },
     {
         "merged": "D:\\MyUniversalToolApplication2\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\rc_checkbox_pressed.png",

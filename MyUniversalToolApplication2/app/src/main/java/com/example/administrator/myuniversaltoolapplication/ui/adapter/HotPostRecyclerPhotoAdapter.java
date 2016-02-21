@@ -19,10 +19,10 @@ import cn.bmob.v3.datatype.BmobFile;
  * Created by Administrator on 2016/2/21.
  */
 public class HotPostRecyclerPhotoAdapter extends BaseAdapter {
-    private List<BmobFile> fileList;
+    private List<BmobFile[]> fileList;
     private Context context;
 
-    public HotPostRecyclerPhotoAdapter(Context context, List<BmobFile> fileList) {
+    public HotPostRecyclerPhotoAdapter(Context context, List<BmobFile[]> fileList) {
         this.context = context;
         this.fileList = fileList;
     }
@@ -52,9 +52,13 @@ public class HotPostRecyclerPhotoAdapter extends BaseAdapter {
             holder.iv_photo = (ImageView) convertView.findViewById(R.id.hotpostfragmentphoto_item_iv_photo);
 
             for (int i = 0; i < fileList.size(); i++) {
-                Picasso.with(context).load(fileList.get(position).getFileUrl(context)).into(holder.iv_photo);
+                for (int j = 0; j < fileList.get(position).length; j++) {
+                    Picasso.with(context).load(fileList.get(position)[j].getFileUrl(context)).into(holder.iv_photo);
+                    Logger.d(fileList.get(position)[j].getFileUrl(context) + "=========================");
+                }
+
             }
-            Logger.d(fileList.get(position).getFileUrl(context)+"=========================");
+
 
             convertView.setTag(holder);
         } else {
