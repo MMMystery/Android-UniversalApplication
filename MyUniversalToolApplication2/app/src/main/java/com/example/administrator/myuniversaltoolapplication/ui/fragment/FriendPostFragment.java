@@ -97,7 +97,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                     postDatas = new Post();//几组数据就得new几次
                     postDatas.setAuthor(datasList.getAuthor());
                     postDatas.setContent(datasList.getContent());
-                    postDatas.setFileList(datasList.getFileList());
+                    postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
                     postDatas.setLikeNum(datasList.getLikeNum());
                     postDatasList.add(postDatas);//每一组数据也都得加到List当中去
@@ -144,7 +144,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                     postDatas = new Post();//几组数据就得new几次
                     postDatas.setAuthor(datasList.getAuthor());
                     postDatas.setContent(datasList.getContent());
-                    postDatas.setFileList(datasList.getFileList());
+                    postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
                     postDatas.setLikeNum(datasList.getLikeNum());
                     postDatasList.add(postDatas);//每一组数据也都得加到List当中去
@@ -185,7 +185,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                     postDatas = new Post();//几组数据就得new几次
                     postDatas.setAuthor(datasList.getAuthor());
                     postDatas.setContent(datasList.getContent());
-                    postDatas.setFileList(datasList.getFileList());
+                    postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
                     postDatas.setLikeNum(datasList.getLikeNum());
                     postDatasList.add(postDatas);//每一组数据也都得加到List当中去

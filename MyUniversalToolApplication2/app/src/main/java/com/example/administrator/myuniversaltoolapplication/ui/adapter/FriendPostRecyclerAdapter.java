@@ -55,13 +55,13 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
         Post postDatas = postDatasList.get(position);
         Picasso.with(context).load(postDatas.getAuthor().getAvater().getFileUrl(context)).into(holder.iv_avater);
 
-        if (null != postDatas.getFileList()) {
+        /*if (null != postDatas.getImgfilestr()) {
             holder.gv_photo.setVisibility(View.VISIBLE);//viewhodler里做了判断，一定记得反过来做一遍。下面做了隐藏，这里就一定要做显示
-            holder.hotPostRecyclerPhotoAdapter = new HotPostRecyclerPhotoAdapter(context, postDatas.getFileList());
-            holder.gv_photo.setAdapter(holder.hotPostRecyclerPhotoAdapter);
+            holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(context, postDatas.getImgfilestr());
+            holder.gv_photo.setAdapter(holder.friendPostRecyclerPhotoAdapter);
         }else{
             holder.gv_photo.setVisibility(View.GONE);//如果没有图片列表，就隐藏掉gridview
-        }
+        }*/
         holder.tv_name.setText(postDatas.getAuthor().getUsername());//获取作者的用户名，作者是个对象
         holder.tv_content.setText(postDatas.getContent());
         holder.tv_commentNum.setText(postDatas.getCommentNum().toString());
@@ -81,7 +81,7 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
         public TextView tv_name, tv_content, tv_commentNum, tv_likeNum;
         private ImageView iv_avater;
         private GridView gv_photo;
-        private HotPostRecyclerPhotoAdapter hotPostRecyclerPhotoAdapter;
+        private FriendPostRecyclerPhotoAdapter friendPostRecyclerPhotoAdapter;
 
         public MyViewHolder(Context context,View itemView) {
             super(itemView);
@@ -92,15 +92,7 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
             tv_commentNum = (TextView) itemView.findViewById(R.id.friendpostfragment_item_tv_commentNum);
             tv_likeNum = (TextView) itemView.findViewById(R.id.friendpostfragment_item_tv_likeNum);
 
-//            gv_photo.setAdapter(hotPostRecyclerPhotoAdapter);
-           /* if (null != postDatas.getFileList()) {
-                hotPostRecyclerPhotoAdapter = new HotPostRecyclerPhotoAdapter(viewhodlerContext, postDatas.getFileList());
-                gv_photo.setAdapter(hotPostRecyclerPhotoAdapter);
-                Logger.d("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-            }else{
-                gv_photo.setVisibility(View.GONE);//如果没有图片列表，就隐藏掉gridview
-                Logger.d("bbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
-            }*/
+
         }
     }
 

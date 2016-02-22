@@ -35,8 +35,6 @@
             android:id="@+id/friendpostfragment_item_gv_photo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin_top_s"
-            android:columnWidth="60dp"
             android:gravity="center"
             android:horizontalSpacing="2dp"
             android:numColumns="3"
