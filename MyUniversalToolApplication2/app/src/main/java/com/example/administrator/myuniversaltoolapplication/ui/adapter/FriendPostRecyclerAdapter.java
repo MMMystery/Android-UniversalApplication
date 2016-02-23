@@ -19,7 +19,10 @@ import com.example.administrator.myuniversaltoolapplication.ui.fragment.FriendPo
 import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import cn.bmob.v3.datatype.BmobFile;
 
 /**
  * Created by Administrator on 2016/2/18.
@@ -55,13 +58,19 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
         Post postDatas = postDatasList.get(position);
         Picasso.with(context).load(postDatas.getAuthor().getAvater().getFileUrl(context)).into(holder.iv_avater);
 
-        /*if (null != postDatas.getImgfilestr()) {
+        if (null != postDatas.getImgfilestr()) {
             holder.gv_photo.setVisibility(View.VISIBLE);//viewhodler里做了判断，一定记得反过来做一遍。下面做了隐藏，这里就一定要做显示
-            holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(context, postDatas.getImgfilestr());
+            ArrayList<BmobFile> bmobFilesList = new ArrayList<BmobFile>();
+            for (int i=0;i<postDatas.getImgfilestr().length;i++){
+                bmobFilesList.add(postDatas.getImgfilestr()[i]);
+            }
+            Logger.d("[[[[[[[[[[[[[[[["+bmobFilesList.size()+"]]]]]]]]]]"+bmobFilesList.get(0)+"---"+bmobFilesList.get(1)
+                    +"---"+bmobFilesList.get(2)+"---"+bmobFilesList.get(3)+"---"+bmobFilesList.get(4));
+            holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(context, bmobFilesList);
             holder.gv_photo.setAdapter(holder.friendPostRecyclerPhotoAdapter);
         }else{
             holder.gv_photo.setVisibility(View.GONE);//如果没有图片列表，就隐藏掉gridview
-        }*/
+        }
         holder.tv_name.setText(postDatas.getAuthor().getUsername());//获取作者的用户名，作者是个对象
         holder.tv_content.setText(postDatas.getContent());
         holder.tv_commentNum.setText(postDatas.getCommentNum().toString());

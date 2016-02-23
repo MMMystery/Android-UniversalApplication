@@ -90,7 +90,6 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
             @Override
             public void onSuccess(List<Post> object) {
                 // TODO Auto-generated method stub
-                Logger.d("------------" + String.valueOf(object.size()) + "------------");
 
                 //把获取下来的List数据传递给postDatas;用于去adapter那显示出来。
                 for (Post datasList : object) {
