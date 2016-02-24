@@ -1,12 +1,12 @@
 /**
  * Copyright 2014 Zhenguo Jin
- *
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p/>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p/>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,206 +21,195 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * 日期工具类
  *
  * @author jingle1267@163.com
  */
-public final class DateUtils {
+public class DateUtils {
+
+    public static String[] WEEK = new String[]{"天", "一", "二", "三", "四", "五", "六"};
+
+    private static final long ONE_SECOND = 1000;
+    private static final long ONE_MINUTE = ONE_SECOND * 60;
+    private static final long ONE_HOUR = ONE_MINUTE * 60;
+    private static final long ONE_DAY = ONE_HOUR * 24;
 
     /**
-     * 日期类型 *
-     */
-    public static final String yyyyMMDD = "yyyy-MM-dd";
-    public static final String yyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss";
-    public static final String HHmmss = "HH:mm:ss";
-    public static final String hhmmss = "HH:mm:ss";
-    public static final String LOCALE_DATE_FORMAT = "yyyy年M月d日 HH:mm:ss";
-    public static final String DB_DATA_FORMAT = "yyyy-MM-DD HH:mm:ss";
-    public static final String NEWS_ITEM_DATE_FORMAT = "hh:mm M月d日 yyyy";
-
-
-    public static String dateToString(Date date, String pattern)
-            throws Exception {
-        return new SimpleDateFormat(pattern).format(date);
-    }
-
-    public static Date stringToDate(String dateStr, String pattern)
-            throws Exception {
-        return new SimpleDateFormat(pattern).parse(dateStr);
-    }
-
-    /**
-     * 将Date类型转换为日期字符串
+     * String 转换 Date
      *
-     * @param date Date对象
-     * @param type 需要的日期格式
-     * @return 按照需求格式的日期字符串
+     * @param str
+     * @param format
+     * @return
      */
-    public static String formatDate(Date date, String type) {
+    public static Date string2Date(String str, String format) {
         try {
-            SimpleDateFormat df = new SimpleDateFormat(type);
-            return df.format(date);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    /**
-     * 将日期字符串转换为Date类型
-     *
-     * @param dateStr 日期字符串
-     * @param type    日期字符串格式
-     * @return Date对象
-     */
-    public static Date parseDate(String dateStr, String type) {
-        SimpleDateFormat df = new SimpleDateFormat(type);
-        Date date = null;
-        try {
-            date = df.parse(dateStr);
+            return new SimpleDateFormat(format).parse(str);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return date;
-
+        return new Date();
     }
 
     /**
-     * 得到年
+     * Date（long） 转换 String
      *
-     * @param date Date对象
-     * @return 年
-     */
-    public static int getYear(Date date) {
-        Calendar c = Calendar.getInstance();
-        c.setTime(date);
-        return c.get(Calendar.YEAR);
-    }
-
-    /**
-     * 得到月
-     *
-     * @param date Date对象
-     * @return 月
-     */
-    public static int getMonth(Date date) {
-        Calendar c = Calendar.getInstance();
-        c.setTime(date);
-        return c.get(Calendar.MONTH) + 1;
-
-    }
-
-    /**
-     * 得到日
-     *
-     * @param date Date对象
-     * @return 日
-     */
-    public static int getDay(Date date) {
-        Calendar c = Calendar.getInstance();
-        c.setTime(date);
-        return c.get(Calendar.DAY_OF_MONTH);
-    }
-
-    /**
-     * 转换日期 将日期转为今天, 昨天, 前天, XXXX-XX-XX, ...
-     *
-     * @param time 时间
-     * @return 当前日期转换为更容易理解的方式
-     */
-    public static String translateDate(Long time) {
-        long oneDay = 24 * 60 * 60 * 1000;
-        Calendar current = Calendar.getInstance();
-        Calendar today = Calendar.getInstance();    //今天
-
-        today.set(Calendar.YEAR, current.get(Calendar.YEAR));
-        today.set(Calendar.MONTH, current.get(Calendar.MONTH));
-        today.set(Calendar.DAY_OF_MONTH, current.get(Calendar.DAY_OF_MONTH));
-        //  Calendar.HOUR——12小时制的小时数 Calendar.HOUR_OF_DAY——24小时制的小时数
-        today.set(Calendar.HOUR_OF_DAY, 0);
-        today.set(Calendar.MINUTE, 0);
-        today.set(Calendar.SECOND, 0);
-
-        long todayStartTime = today.getTimeInMillis();
-
-        if (time >= todayStartTime && time < todayStartTime + oneDay) { // today
-            return "今天";
-        } else if (time >= todayStartTime - oneDay && time < todayStartTime) { // yesterday
-            return "昨天";
-        } else if (time >= todayStartTime - oneDay * 2 && time < todayStartTime - oneDay) { // the day before yesterday
-            return "前天";
-        } else if (time > todayStartTime + oneDay) { // future
-            return "将来某一天";
-        } else {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            Date date = new Date(time);
-            return dateFormat.format(date);
-        }
-    }
-
-    /**
-     * 转换日期 转换为更为人性化的时间
-     *
-     * @param time 时间
+     * @param time
+     * @param format
      * @return
      */
-    private String translateDate(long time, long curTime) {
-        long oneDay = 24 * 60 * 60;
-        Calendar today = Calendar.getInstance();    //今天
-        today.setTimeInMillis(curTime * 1000);
-        today.set(Calendar.HOUR_OF_DAY, 0);
-        today.set(Calendar.MINUTE, 0);
-        today.set(Calendar.SECOND, 0);
-        long todayStartTime = today.getTimeInMillis() / 1000;
-        if (time >= todayStartTime) {
-            long d = curTime - time;
-            if (d <= 60) {
-                return "1分钟前";
-            } else if (d <= 60 * 60) {
-                long m = d / 60;
-                if (m <= 0) {
-                    m = 1;
-                }
-                return m + "分钟前";
-            } else {
-                SimpleDateFormat dateFormat = new SimpleDateFormat("今天 HH:mm");
-                Date date = new Date(time * 1000);
-                String dateStr = dateFormat.format(date);
-                if (!TextUtils.isEmpty(dateStr) && dateStr.contains(" 0")) {
-                    dateStr = dateStr.replace(" 0", " ");
-                }
-                return dateStr;
-            }
-        } else {
-            if (time < todayStartTime && time > todayStartTime - oneDay) {
-                SimpleDateFormat dateFormat = new SimpleDateFormat("昨天 HH:mm");
-                Date date = new Date(time * 1000);
-                String dateStr = dateFormat.format(date);
-                if (!TextUtils.isEmpty(dateStr) && dateStr.contains(" 0")) {
+    public static String date2String(long time, String format) {
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        String s = sdf.format(time);
+        return s;
+    }
 
-                    dateStr = dateStr.replace(" 0", " ");
-                }
-                return dateStr;
-            } else  if (time < todayStartTime - oneDay && time > todayStartTime - 2 * oneDay){
-                SimpleDateFormat dateFormat = new SimpleDateFormat("前天 HH:mm");
-                Date date = new Date(time * 1000);
-                String dateStr = dateFormat.format(date);
-                if (!TextUtils.isEmpty(dateStr) && dateStr.contains(" 0")) {
-                    dateStr = dateStr.replace(" 0", " ");
-                }
-                return dateStr;
-            } else {
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-                Date date = new Date(time * 1000);
-                String dateStr = dateFormat.format(date);
-                if (!TextUtils.isEmpty(dateStr) && dateStr.contains(" 0")) {
-                    dateStr = dateStr.replace(" 0", " ");
-                }
-                return dateStr;
+    /**
+     * long 去除 时分秒
+     * 时分秒全部为0
+     *
+     * @param date
+     * @return
+     */
+    public static long getYearMonthDay(long date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(date);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        return calendar.getTimeInMillis();
+    }
+
+    /**
+     * 获取目标时间和当前时间之间的差距
+     *
+     * @param date
+     * @return
+     */
+    public static String getTimestampString(Date date) {
+        Date curDate = new Date();
+        long splitTime = curDate.getTime() - date.getTime();
+        if (splitTime < (30 * ONE_DAY)) {
+            if (splitTime < ONE_MINUTE) {
+                return "刚刚";
             }
+            if (splitTime < ONE_HOUR) {
+                return String.format("%d分钟前", splitTime / ONE_MINUTE);
+            }
+
+            if (splitTime < ONE_DAY) {
+                return String.format("%d小时前", splitTime / ONE_HOUR);
+            }
+
+            return String.format("%d天前", splitTime / ONE_DAY);
         }
+        String result;
+        result = "M月d日 HH:mm";
+        return (new SimpleDateFormat(result, Locale.CHINA)).format(date);
+    }
+
+    /**
+     * 24小时制 转换 12小时制
+     *
+     * @param time
+     * @return
+     */
+    public static String time24To12(String time) {
+        String str[] = time.split(":");
+        int h = Integer.valueOf(str[0]);
+        int m = Integer.valueOf(str[1]);
+        String sx;
+        if (h < 1) {
+            h = 12;
+            sx = "上午";
+        } else if (h < 12) {
+            sx = "上午";
+        } else if (h < 13) {
+            sx = "下午";
+        } else {
+            sx = "下午";
+            h -= 12;
+        }
+        return String.format("%d:%02d%s", h, m, sx);
+    }
+
+    /**
+     * Date 转换 HH
+     *
+     * @param date
+     * @return
+     */
+    public static String date2HH(Date date) {
+        return new SimpleDateFormat("HH").format(date);
+    }
+
+    /**
+     * Date 转换 HH:mm:ss
+     *
+     * @param date
+     * @return
+     */
+    public static String date2HHmm(Date date) {
+        return new SimpleDateFormat("HH:mm").format(date);
+    }
+
+    /**
+     * Date 转换 HH:mm:ss
+     *
+     * @param date
+     * @return
+     */
+    public static String date2HHmmss(Date date) {
+        return new SimpleDateFormat("HH:mm:ss").format(date);
+    }
+
+    /**
+     * Date 转换 MM.dd
+     *
+     * @param date
+     * @return
+     */
+    public static String date2MMdd(Date date) {
+        return new SimpleDateFormat("MM.dd").format(date);
+    }
+
+    /**
+     * Date 转换 yyyy.MM.dd
+     *
+     * @param date
+     * @return
+     */
+    public static String date2yyyyMMdd(Date date) {
+        return new SimpleDateFormat("yyyy.MM.dd").format(date);
+    }
+
+    /**
+     * Date 转换 MM月dd日 星期
+     *
+     * @param date
+     * @return
+     */
+    public static String date2MMddWeek(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+        return new SimpleDateFormat("MM月dd日 星期").format(date) + WEEK[dayOfWeek - 1];
+    }
+
+    /**
+     * Date 转换 yyyy年MM月dd日 星期
+     *
+     * @param date
+     * @return
+     */
+    public static String date2yyyyMMddWeek(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+        return new SimpleDateFormat("yyyy年MM月dd日 星期").format(date) + WEEK[dayOfWeek - 1];
     }
 
 }

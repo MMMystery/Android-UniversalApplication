@@ -45,6 +45,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/friendpostfragment_item_tv_creattime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="time" />

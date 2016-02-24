@@ -14,6 +14,7 @@ import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
 import com.example.administrator.myuniversaltoolapplication.entity.Post;
 import com.example.administrator.myuniversaltoolapplication.ui.adapter.FriendPostRecyclerAdapter;
+import com.example.administrator.myuniversaltoolapplication.utils.DateUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
@@ -67,7 +68,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
 
         rv_RecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
         rv_RecyclerView.setLaodingMoreProgressStyle(ProgressStyle.BallRotate);
-//        rv_RecyclerView.setArrowImageView(R.mipmap.arrow_refresh);
+        rv_RecyclerView.setArrowImageView(R.mipmap.arrow_refresh);
         rv_RecyclerView.setLoadingListener(this);
 
         postDatasList = new ArrayList<Post>();
@@ -99,6 +100,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                     postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
                     postDatas.setLikeNum(datasList.getLikeNum());
+                    postDatas.setCreatTime(DateUtils.string2Date(datasList.getCreatedAt(),"yyyy-MM-dd HH:mm:ss"));
                     postDatasList.add(postDatas);//每一组数据也都得加到List当中去
                 }
 
@@ -146,6 +148,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                     postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
                     postDatas.setLikeNum(datasList.getLikeNum());
+                    postDatas.setCreatTime(DateUtils.string2Date(datasList.getCreatedAt(),"yyyy-MM-dd HH:mm:ss"));
                     postDatasList.add(postDatas);//每一组数据也都得加到List当中去
                 }
 
@@ -187,6 +190,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                     postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
                     postDatas.setLikeNum(datasList.getLikeNum());
+                    postDatas.setCreatTime(DateUtils.string2Date(datasList.getCreatedAt(),"yyyy-MM-dd HH:mm:ss"));
                     postDatasList.add(postDatas);//每一组数据也都得加到List当中去
                 }
 

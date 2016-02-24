@@ -1,5 +1,6 @@
 package com.example.administrator.myuniversaltoolapplication.entity;
 
+import java.util.Date;
 import java.util.List;
 
 import cn.bmob.v3.BmobObject;
@@ -17,6 +18,15 @@ public class Post extends BmobObject {
     private BmobRelation likes;//多对多关系：用于存储喜欢该帖子的所有用户
     private Integer likeNum;//点赞数
     private Integer commentNum;//评论数
+    private Date creatTime;//评论数
+
+    public Date getCreatTime() {
+        return creatTime;
+    }
+
+    public void setCreatTime(Date creatTime) {
+        this.creatTime = creatTime;
+    }
 
     public BmobFile[] getImgfilestr() {
         return imgfilestr;

@@ -2,16 +2,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.TwoFragment"
     android:background="@color/col_eeeeee"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.fragment.TwoFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <include
-        layout="@layout/topbar_base"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="two" />
+    <include layout="@layout/topbar_base" />
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_two_vp_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
+        <LinearLayout
+            android:id="@+id/fragment_two_ll_dotall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>
