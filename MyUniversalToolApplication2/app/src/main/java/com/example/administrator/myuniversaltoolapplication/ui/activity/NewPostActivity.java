@@ -17,6 +17,7 @@ import com.bmob.btp.callback.UploadBatchListener;
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
 import com.example.administrator.myuniversaltoolapplication.entity.Post;
+import com.example.administrator.myuniversaltoolapplication.utils.BitmapUtil;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;

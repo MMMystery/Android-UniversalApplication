@@ -111,7 +111,6 @@ public class LoginActivity extends BaseActivity {
                 @Override
                 public void onClick(View v) {
                     final MyUser myUser = new MyUser();
-//                    final BmobUser bmobUser = new BmobUser();
                     myUser.setUsername(et_username.getText().toString().trim());
                     myUser.setPassword(et_Password.getText().toString().trim());
                     myUser.login(getApplicationContext(), new SaveListener() {
@@ -123,6 +122,7 @@ public class LoginActivity extends BaseActivity {
 //                            final String RM_Token_URL = "https://api.cn.ronghub.com/user/getToken.json";
                             String current_objectId = String.valueOf(myUser.getObjectId());
                             String current_Username = String.valueOf(myUser.getUsername());
+                            myUser.getAvater();
 
                             //设置数据保存到本地SP中
                             SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_OBJECTID, current_objectId);
