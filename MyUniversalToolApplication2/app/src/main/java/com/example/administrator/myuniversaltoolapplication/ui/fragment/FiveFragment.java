@@ -81,7 +81,6 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
         topBar_bt_right.setOnClickListener(this);
         ll_logout.setOnClickListener(this);
         ll_exit.setOnClickListener(this);
-//        Logger.d((String) SPUtils.get(getActivity(), AppConstants.Key.CURRENT_AVATER, "--"));
         if (!SPUtils.get(getActivity(), AppConstants.Key.CURRENT_AVATER, "").equals("")) {
             String fileUrl = (String) SPUtils.get(getActivity(), AppConstants.Key.CURRENT_AVATER, "");
             Picasso.with(getActivity()).load(fileUrl).into(iv_avater);
@@ -159,7 +158,7 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
                         Toast.makeText(getActivity(), "SD不可用", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    Logger.d("/////////////////111111111111111111" + data.toString());
+                    Logger.d("/////////////////111111111111111111"+data.toString());
                     File file = new File(Environment.getExternalStorageDirectory() + "/" + IMAGE_FILE_NAME);
                     startImageCrop(Uri.fromFile(file), 300, 300, true);
                 }
@@ -171,7 +170,7 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
                         Toast.makeText(getActivity(), "SD不可用", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    Logger.d("/////////////////22222222222222222222222" + data.toString());
+                    Logger.d("/////////////////22222222222222222222222"+data.toString());
                     startImageCrop(data.getData(), 300, 300, true);
                 } else {
 //                    Toast.makeText(getActivity(), "照片获取失败", Toast.LENGTH_SHORT).show();
@@ -180,7 +179,7 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
                 break;
             case 3:// 裁剪头像返回
                 if (data != null) {
-                    Logger.d("0000000000000000" + data.toString());
+                    Logger.d("0000000000000000"+data.toString());
                     saveCropAvator(data);
                 }
                 break;
@@ -207,7 +206,7 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
     }
 
     private void saveCropAvator(Intent data) {
-        Logger.d("11111111111111111111111" + data.toString());
+        Logger.d("11111111111111111111111"+data.toString());
         Bundle extras = data.getExtras();
         if (extras != null) {
             Bitmap bitmap = extras.getParcelable("data");
@@ -235,7 +234,6 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onSuccess(String fileName, String url, BmobFile file) {
                 Logger.d("bmob", "文件上传成功：" + fileName + ",可访问的文件地址：" + file.getUrl());//后面这个就是访问图片的url不过没有在bmob进行url签名暂时访问时无效的
-                Logger.d("url：", url);//后面这个就是访问图片的url不过没有在bmob进行url签名暂时访问时无效的
 
                 ToastUtils.show(getActivity(), "新方法---上传文件成功：" + file.getUrl());
 
@@ -245,7 +243,7 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
                 //url2没用上，搞清两者区别
                 String URL2 = BmobProFile.getInstance(getActivity()).signURL(fileName, file.getUrl(), "7af54fcbd534962f74d6f18d30441aea", 50, "abc");
                 Logger.d(URL2);*/
-                sendAvatar(file.getUrl());
+                sendAvatar(file);
 
             }
 
@@ -265,33 +263,33 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
         });
     }
 
-    private void sendAvatar(String url) {
+    private void sendAvatar(final BmobFile file) {
         Logger.i("444444444444444444");
         //获取url后更新用户的头像信息
+        final MyUser myUser = BmobUser.getCurrentUser(getActivity(), MyUser.class);
+        if (myUser != null) {
+            MyUser newUser = new MyUser();
+            newUser.setAvater(file);
+            newUser.update(getActivity(), myUser.getObjectId(), new UpdateListener() {
 
+                @Override
+                public void onSuccess() {
+                    // TODO Auto-generated method stub
+                    Picasso.with(getActivity())
+                            .load(file.getFileUrl(getActivity()))
+                            .error(R.mipmap.ic_launcher)
+                            .into(iv_avater);
+                    SPUtils.put(getActivity(), AppConstants.Key.CURRENT_AVATER, file.getFileUrl(getActivity()));
+                }
 
-        final MyUser myUser = new MyUser();
-        myUser.setAvaterUrl(url);
-        BmobUser bmobUser = BmobUser.getCurrentUser(getActivity());
-        myUser.update(getActivity(), bmobUser.getObjectId(), new UpdateListener() {
-
-            @Override
-            public void onSuccess() {
-                // TODO Auto-generated method stub
-                Picasso.with(getActivity())
-                        .load(myUser.getAvaterUrl())
-                        .error(R.mipmap.ic_launcher)
-                        .into(iv_avater);
-                SPUtils.put(getActivity(), AppConstants.Key.CURRENT_AVATER, myUser.getAvaterUrl());
-                Logger.d(String.valueOf(SPUtils.get(getActivity(), AppConstants.Key.CURRENT_AVATER, "").equals("==")));
-            }
-
-            @Override
-            public void onFailure(int code, String msg) {
-                // TODO Auto-generated method stub
-                ToastUtils.show(getActivity(), "更新用户信息失败:" + msg);
-            }
-        });
-
+                @Override
+                public void onFailure(int code, String msg) {
+                    // TODO Auto-generated method stub
+                    ToastUtils.show(getActivity(), "更新用户信息失败:" + msg);
+                }
+            });
+        } else {
+            ToastUtils.show(getActivity(), "本地用户为null,请登录。");
+        }
     }
 }

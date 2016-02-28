@@ -9,16 +9,15 @@ import cn.bmob.v3.datatype.BmobFile;
 public class MyUser extends BmobUser {
 
     private Integer sex;
-    private String avaterUrl;
+    private BmobFile avater;
 
-    public String getAvaterUrl() {
-        return avaterUrl;
+    public BmobFile getAvater() {
+        return avater;
     }
 
-    public void setAvaterUrl(String avaterUrl) {
-        this.avaterUrl = avaterUrl;
+    public void setAvater(BmobFile avater) {
+        this.avater = avater;
     }
-
 
   /*  private String img_avater;
 

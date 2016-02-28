@@ -57,7 +57,7 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
     @Override
     public void onBindViewHolder(FriendPostRecyclerAdapter.MyViewHolder holder, int position) {
         Post postDatas = postDatasList.get(position);
-        Picasso.with(context).load(postDatas.getAuthor().getAvaterUrl()).into(holder.iv_avater);
+        Picasso.with(context).load(postDatas.getAuthor().getAvater().getFileUrl(context)).into(holder.iv_avater);
 
         if (null != postDatas.getImgfilestr()) {
             holder.gv_photo.setVisibility(View.VISIBLE);//viewhodler里做了判断，一定记得反过来做一遍。下面做了隐藏，这里就一定要做显示

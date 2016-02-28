@@ -85,7 +85,7 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
                     public void onSuccess(boolean isFinish, String[] fileNames, String[] urls, BmobFile[] files) {
 
                         if (isFinish) {
-                            upLoadPost(et_content.getText().toString(), files,urls);
+                            upLoadPost(et_content.getText().toString(), files);
                         }
                     }
 
@@ -107,6 +107,7 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.newpostActivity_bt_addphoto:
                 PhotoPickerIntent intent = new PhotoPickerIntent(NewPostActivity.this);
                 allowPhotosNum = 9 - index;
+                Logger.d("///////////////////////" + allowPhotosNum + "////////////////////////");
                 intent.setPhotoCount(allowPhotosNum);//每次点，限制的图片数量都是不定的
                 intent.setShowCamera(true);
                 startActivityForResult(intent, REQUEST_CODE);
@@ -151,7 +152,7 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    private void upLoadPost(String content, BmobFile[] filestr, String[] urls) {
+    private void upLoadPost(String content, BmobFile[] filestr) {
         MyUser user = BmobUser.getCurrentUser(this, MyUser.class);
         // 创建帖子信息
         Post post = new Post();
@@ -160,7 +161,6 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
         post.setAuthor(user);
         post.setContent(content);
         post.setImgfilestr(filestr);//上传一系列图片
-        post.setImgurls(urls);//上传一系列图片的url
         post.setCommentNum(0);
         post.setLikeNum(0);
         post.save(this, new SaveListener() {

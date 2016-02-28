@@ -122,12 +122,11 @@ public class LoginActivity extends BaseActivity {
 //                            final String RM_Token_URL = "https://api.cn.ronghub.com/user/getToken.json";
                             String current_objectId = String.valueOf(myUser.getObjectId());
                             String current_Username = String.valueOf(myUser.getUsername());
-                            String current_UserAvater = String.valueOf(myUser.getAvaterUrl());
-                            Logger.d(current_UserAvater+"----");
+                            myUser.getAvater();
+
                             //设置数据保存到本地SP中
                             SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_OBJECTID, current_objectId);
                             SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_USERNAME, current_Username);
-                            SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_AVATER, current_UserAvater);
 
 
                             //连接融云服务器
