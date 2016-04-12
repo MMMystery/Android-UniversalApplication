@@ -1,7 +1,6 @@
 package com.example.administrator.myuniversaltoolapplication.ui.fragment;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -10,12 +9,9 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -33,7 +29,6 @@ import com.example.administrator.myuniversaltoolapplication.ui.activity.LoginAct
 import com.example.administrator.myuniversaltoolapplication.utils.ActivityCollectorUtil;
 import com.example.administrator.myuniversaltoolapplication.utils.PhotoUtil;
 import com.example.administrator.myuniversaltoolapplication.utils.SPUtils;
-import com.example.administrator.myuniversaltoolapplication.utils.ScreenUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.flyco.dialog.listener.OnOperItemClickL;
 import com.flyco.dialog.widget.ActionSheetDialog;

@@ -1,9 +1,7 @@
 package com.example.administrator.myuniversaltoolapplication.ui.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,12 +9,10 @@ import android.widget.EditText;
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.app.AppConstants;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
-import com.example.administrator.myuniversaltoolapplication.utils.RegUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.SPUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.orhanobut.logger.Logger;
 
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.SaveListener;
 
 /**

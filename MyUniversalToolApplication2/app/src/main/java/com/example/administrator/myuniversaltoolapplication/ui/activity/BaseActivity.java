@@ -1,14 +1,10 @@
 package com.example.administrator.myuniversaltoolapplication.ui.activity;
 
+
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.FrameLayout;
 
 import com.example.administrator.myuniversaltoolapplication.utils.ActivityCollectorUtil;
-
 
 /**
  * Created by Administrator on 2015/12/17.

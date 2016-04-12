@@ -12,7 +12,6 @@ import com.example.administrator.myuniversaltoolapplication.app.AppConstants;
 import com.example.administrator.myuniversaltoolapplication.app.MyApplication;
 import com.example.administrator.myuniversaltoolapplication.entity.Friend;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
-import com.example.administrator.myuniversaltoolapplication.utils.RegUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.SPUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.orhanobut.logger.Logger;
@@ -21,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.listener.SaveListener;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;

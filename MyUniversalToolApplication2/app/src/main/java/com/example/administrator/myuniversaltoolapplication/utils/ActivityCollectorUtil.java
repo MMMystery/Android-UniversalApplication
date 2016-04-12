@@ -1,9 +1,9 @@
 package com.example.administrator.myuniversaltoolapplication.utils;
 
+import android.app.Activity;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import android.app.Activity;
 
 public class ActivityCollectorUtil {
 

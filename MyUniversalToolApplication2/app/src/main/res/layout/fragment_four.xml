@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.FourFragment"
+    tools:context="com.example.administrator.mytravel.ui.FourFragment"
     android:background="@color/col_eeeeee"
     android:orientation="vertical">
 
