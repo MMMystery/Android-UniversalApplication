@@ -29,9 +29,9 @@ public class MainActivity extends BaseActivity implements  View.OnClickListener,
 
     private ArrayList<Fragment> fragmentList;
     private OneFragment oneFragment;
-    private TwoFragment twoFragment;
+//    private TwoFragment twoFragment;
     private ThreeFragment threeFragment;
-    private FourFragment fourFragment;
+//    private FourFragment fourFragment;
     private FiveFragment fiveFragment;
 
     private String all;
@@ -49,38 +49,38 @@ public class MainActivity extends BaseActivity implements  View.OnClickListener,
 
     public void initView() {
         btn1 = (RadioButton) findViewById(R.id.mainactivity_btn_btn1);
-        btn2 = (RadioButton) findViewById(R.id.mainactivity_btn_btn2);
+//        btn2 = (RadioButton) findViewById(R.id.mainactivity_btn_btn2);
         btn3 = (RadioButton) findViewById(R.id.mainactivity_btn_btn3);
-        btn4 = (RadioButton) findViewById(R.id.mainactivity_btn_btn4);
+//        btn4 = (RadioButton) findViewById(R.id.mainactivity_btn_btn4);
         btn5 = (RadioButton) findViewById(R.id.mainactivity_btn_btn5);
         radioGroup = (RadioGroup) findViewById(R.id.mainactivity_rg_tabs);
         viewPager = (ViewPager) findViewById(R.id.mainactivity_vp_viewpager);
         btn1.setOnClickListener(this);
-        btn2.setOnClickListener(this);
+//        btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
-        btn4.setOnClickListener(this);
+//        btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
 
         if (oneFragment == null) {
             oneFragment = new OneFragment();
         }
-        if (twoFragment == null) {
-            twoFragment = new TwoFragment();
-        }
+//        if (twoFragment == null) {
+//            twoFragment = new TwoFragment();
+//        }
         if (threeFragment == null) {
             threeFragment = new ThreeFragment();
         }
-        if (fourFragment == null) {
-            fourFragment = new FourFragment();
-        }
+//        if (fourFragment == null) {
+//            fourFragment = new FourFragment();
+//        }
         if (fiveFragment == null) {
             fiveFragment = new FiveFragment();
         }
         fragmentList = new ArrayList<Fragment>();
         fragmentList.add(oneFragment);
-        fragmentList.add(twoFragment);
+//        fragmentList.add(twoFragment);
         fragmentList.add(threeFragment);
-        fragmentList.add(fourFragment);
+//        fragmentList.add(fourFragment);
         fragmentList.add(fiveFragment);
         viewPager.setOffscreenPageLimit(5);//把viewpager设定为5层才销毁
 
@@ -101,20 +101,20 @@ public class MainActivity extends BaseActivity implements  View.OnClickListener,
                 viewPager.setCurrentItem(0);
                 radioGroup.check(R.id.mainactivity_btn_btn1);
                 break;
-            case R.id.mainactivity_btn_btn2:
-                viewPager.setCurrentItem(1);
-                radioGroup.check(R.id.mainactivity_btn_btn2);
-                break;
+//            case R.id.mainactivity_btn_btn2:
+//                viewPager.setCurrentItem(1);
+//                radioGroup.check(R.id.mainactivity_btn_btn2);
+//                break;
             case R.id.mainactivity_btn_btn3:
-                viewPager.setCurrentItem(2);
+                viewPager.setCurrentItem(1);
                 radioGroup.check(R.id.mainactivity_btn_btn3);
                 break;
-            case R.id.mainactivity_btn_btn4:
-                viewPager.setCurrentItem(3);
-                radioGroup.check(R.id.mainactivity_btn_btn4);
-                break;
+//            case R.id.mainactivity_btn_btn4:
+//                viewPager.setCurrentItem(3);
+//                radioGroup.check(R.id.mainactivity_btn_btn4);
+//                break;
             case R.id.mainactivity_btn_btn5:
-                viewPager.setCurrentItem(4);
+                viewPager.setCurrentItem(2);
                 radioGroup.check(R.id.mainactivity_btn_btn5);
                 break;
             default:
@@ -139,17 +139,17 @@ public class MainActivity extends BaseActivity implements  View.OnClickListener,
                 radioGroup.check(R.id.mainactivity_btn_btn1);
                 break;
             case 1:
-                radioGroup.check(R.id.mainactivity_btn_btn2);
-                break;
-            case 2:
                 radioGroup.check(R.id.mainactivity_btn_btn3);
                 break;
-            case 3:
-                radioGroup.check(R.id.mainactivity_btn_btn4);
-                break;
-            case 4:
+            case 2:
                 radioGroup.check(R.id.mainactivity_btn_btn5);
                 break;
+//            case 3:
+//                radioGroup.check(R.id.mainactivity_btn_btn4);
+//                break;
+//            case 4:
+//                radioGroup.check(R.id.mainactivity_btn_btn5);
+//                break;
         }
 
     }

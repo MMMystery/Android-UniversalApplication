@@ -26,7 +26,7 @@
             android:button="@null"
             />
 
-        <RadioButton
+     <!--   <RadioButton
             android:id="@+id/mainactivity_btn_btn2"
             android:layout_width="0dp"
             android:layout_height="34dp"
@@ -37,7 +37,7 @@
             android:layout_marginRight="16dp"
             android:background="@drawable/select_mainactivity_btn2"
             android:button="@null"
-           />
+           />-->
 
         <RadioButton
             android:id="@+id/mainactivity_btn_btn3"
@@ -52,7 +52,7 @@
             android:button="@null"
             />
 
-        <RadioButton
+     <!--   <RadioButton
             android:id="@+id/mainactivity_btn_btn4"
             android:layout_width="0dp"
             android:layout_height="34dp"
@@ -63,7 +63,7 @@
             android:layout_marginRight="16dp"
             android:background="@drawable/select_mainactivity_btn4"
             android:button="@null"
-             />
+             />-->
 
         <RadioButton
             android:id="@+id/mainactivity_btn_btn5"

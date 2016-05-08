@@ -4,7 +4,6 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 
-import com.android.volley.RequestQueue;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
@@ -18,7 +17,6 @@ import io.rong.imkit.RongIM;
 public class MyApplication extends Application {
 
     private RefWatcher mRefWatcher;//LeakCanary性能检测
-    public static RequestQueue requestQueue;//外部如果要引用这个对象的话，这个对象需要时公开的，并且静态的。
     @Override
     public void onCreate() {
         super.onCreate();

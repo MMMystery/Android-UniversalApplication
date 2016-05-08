@@ -153,7 +153,7 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
                         Toast.makeText(getActivity(), "SD不可用", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    Logger.d("/////////////////111111111111111111"+data.toString());
+//                    Logger.d("/////////////////111111111111111111"+data.toString());
                     File file = new File(Environment.getExternalStorageDirectory() + "/" + IMAGE_FILE_NAME);
                     startImageCrop(Uri.fromFile(file), 300, 300, true);
                 }
