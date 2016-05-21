@@ -48,12 +48,14 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
     private ImageView iv_avater;
     private TextView tv_currentUserName;
     private Button topBar_bt_right;
+    private TextView topBar_tv_title;
     private LinearLayout ll_logout, ll_exit;
     private static final String IMAGE_FILE_NAME = "avatarImage.jpg";//拍完照的照片都給它定為這個名字
     private String filePath;
     private static int CAMERA_REQUEST_CODE = 1;
     private static int GALLERY_REQUEST_CODE = 2;
     private static int CROP_REQUEST_CODE = 3;
+    private MyUser myUser;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,23 +72,25 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
         iv_avater = (ImageView) view.findViewById(R.id.fivefragment_iv_avater);
         tv_currentUserName = (TextView) view.findViewById(R.id.fivefragment_tv_currentUserName);
         topBar_bt_right = (Button) view.findViewById(R.id.topbar_btn_right);
+        topBar_tv_title = (TextView)view.findViewById(R.id.topbar_tv_title);
         ll_logout = (LinearLayout) view.findViewById(R.id.fivefragment_ll_logout);
         ll_exit = (LinearLayout) view.findViewById(R.id.fivefragment_ll_exit);
         iv_avater.setOnClickListener(this);
         topBar_bt_right.setOnClickListener(this);
         ll_logout.setOnClickListener(this);
         ll_exit.setOnClickListener(this);
-        if (!SPUtils.get(getActivity(), AppConstants.Key.CURRENT_AVATER, "").equals("")) {
-            String fileUrl = (String) SPUtils.get(getActivity(), AppConstants.Key.CURRENT_AVATER, "");
-            Picasso.with(getActivity()).load(fileUrl).into(iv_avater);
+        topBar_tv_title.setText("个人中心");
+
+        myUser = BmobUser.getCurrentUser(getActivity(), MyUser.class);
+
+        if ( null != myUser.getAvater()) {
+            Picasso.with(getActivity()).load(myUser.getAvater().getFileUrl(getActivity())).into(iv_avater);
         } else {
             //设置默认头像
             Picasso.with(getActivity()).load(R.mipmap.img_wechat).into(iv_avater);
         }
 
         String currentUserName = (String) SPUtils.get(getActivity(), AppConstants.Key.CURRENT_USERNAME, "");
-
-
         tv_currentUserName.setText(currentUserName);
     }
 

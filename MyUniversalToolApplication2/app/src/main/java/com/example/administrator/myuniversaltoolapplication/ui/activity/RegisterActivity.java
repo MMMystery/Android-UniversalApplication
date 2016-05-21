@@ -63,6 +63,8 @@ public class RegisterActivity extends BaseActivity {
                         String objectId = String.valueOf(myUser.getObjectId());
                         String currentusername = String.valueOf(myUser.getUsername());
 
+                        //清空之前的存储
+                        SPUtils.clear(getApplicationContext());
                         //设置数据保存到本地SP中
                         SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_USERNAME, currentusername);
                         SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_OBJECTID, objectId);

@@ -30,10 +30,15 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:name=".app.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -92,21 +97,24 @@
             android:name=".ui.activity.DiscoverActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activity.DetailPostActivity"></activity>
         <activity
             android:name=".ui.activity.NewPostActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="me.iwf.photopicker.PhotoPickerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            />
-
-        <activity android:name="me.iwf.photopicker.PhotoPagerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <!-- 融云开始 -->
         <service
             android:name="io.rong.push.PushService"
-            android:process="io.rong.push"> <!-- Waring: The name of the push process can't be changed!!! -->
+            android:process="io.rong.push">
+
+            <!-- Waring: The name of the push process can't be changed!!! -->
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -115,7 +123,9 @@
         </service>
         <service
             android:name="io.rong.push.CommandService"
-            android:process="io.rong.push"> <!-- Waring: The name of the push process can't be changed!!! -->
+            android:process="io.rong.push">
+
+            <!-- Waring: The name of the push process can't be changed!!! -->
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -125,7 +135,9 @@
 
         <receiver
             android:name="io.rong.push.PushReceiver"
-            android:process="io.rong.push"> <!-- Waring: The name of the push process can't be changed!!! -->
+            android:process="io.rong.push">
+
+            <!-- Waring: The name of the push process can't be changed!!! -->
             <intent-filter>
                 <action android:name="io.rong.imlib.action.push.heartbeat" />
             </intent-filter>

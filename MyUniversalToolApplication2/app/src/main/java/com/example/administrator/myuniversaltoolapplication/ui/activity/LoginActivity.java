@@ -15,7 +15,13 @@ import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
 import com.example.administrator.myuniversaltoolapplication.utils.SPUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.orhanobut.logger.Logger;
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,51 +63,32 @@ public class LoginActivity extends BaseActivity {
         bt_register = (Button) findViewById(R.id.login_bt_register);
 
         //先检测用户是否登陆过
-        MyUser myUser = BmobUser.getCurrentUser(this, MyUser.class);
+        final MyUser myUser = BmobUser.getCurrentUser(this, MyUser.class);
         if (myUser != null) {
             /**
              //         * 获取本地用户信息
              //         */
-            //V3.4.5版本新增加getObjectByKey方法获取本地用户对象中某一列的值
-//            final String RM_Token_URL = "https://api.cn.ronghub.com/user/getToken.json";
-
-            //方法从本地缓存中获取当前登陆用户某一列的值。其中key为用户表的指定列名
-           /* final String current_objectId = (String) BmobUser.getObjectByKey(getApplicationContext(), AppConstants.Key.BOMBUSERTABLE_OBJECTID);
-            final String current_Username = (String) BmobUser.getObjectByKey(getApplicationContext(), AppConstants.Key.BOMBUSERTABLE_USERNAME);
-            if (null != BmobUser.getObjectByKey(getApplicationContext(), AppConstants.Key.BOMBUSERTABLE_AVATER)) {
-                BmobFile current_Avater = (BmobFile) BmobUser.getObjectByKey(getApplicationContext(), AppConstants.Key.CURRENT_AVATER);
-                SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_AVATER, current_Avater.getFileUrl(this));//把file转换成Url
-
-            }
-            //从本地bmob缓存中获取下来的数据保存本地SP中
-            SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_OBJECTID, current_objectId);
-            SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_USERNAME, current_Username);
-            Logger.i("bmob", current_objectId + ",\n" + current_Username);*/
-
-            //连接融云服务器
-            connect(TOKEN);
-           /* //去获取融云Token
-            try {
-                new Thread() {
-                    @Override
-                    public void run() {
-                        super.run();
-                        try {
 
 
-                            getToken(RM_Token_URL, objectId, currentusername,img_avater);
-                            Logger.i("正在获取token");
+//            Logger.d(myUser.getAvater().getFileUrl(this));
+            Logger.d(myUser.getObjectId());
+            Logger.d(myUser.getUsername());
+            //去获取融云Token
+            new Thread() {
+                @Override
+                public void run() {
+                    super.run();
 
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(intent);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }.start();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }*/
+
+//                        getToken("https://api.cn.ronghub.com/user/getToken.json", String.valueOf(myUser.getObjectId()), String.valueOf(myUser.getUsername()), "http://img2.imgtn.bdimg.com/it/u=3942935399,659074957&fm=21&gp=0.jpg");
+                    Logger.i("正在获取token");
+                    //连接融云服务器
+                    connect(TOKEN);
+
+//                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                            startActivity(intent);
+                }
+            }.start();
 
         } else {
             //第一次登陆，需要输入用户和密码
@@ -120,37 +107,27 @@ public class LoginActivity extends BaseActivity {
 //                            final String RM_Token_URL = "https://api.cn.ronghub.com/user/getToken.json";
                             String current_objectId = String.valueOf(myUser.getObjectId());
                             String current_Username = String.valueOf(myUser.getUsername());
-                            myUser.getAvater();
 
+                            //清空之前的存储
+                            SPUtils.clear(getApplicationContext());
                             //设置数据保存到本地SP中
                             SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_OBJECTID, current_objectId);
                             SPUtils.put(getApplicationContext(), AppConstants.Key.CURRENT_USERNAME, current_Username);
 
 
-                            //连接融云服务器
-                            connect(TOKEN);
-
-                           /* //去获取Token
-                            try {
-                                new Thread() {
-                                    @Override
-                                    public void run() {
-                                        super.run();
-                                        try {
-
-//                                            getToken(RM_Token_URL, objectId, currentusername,img_avater);
-                                            Logger.i("正在获取token");
+                            new Thread() {
+                                @Override
+                                public void run() {
+                                    super.run();
 
 
-                                        } catch (IOException e) {
-                                            e.printStackTrace();
-                                        }
-                                    }
-                                }.start();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }*/
+//                                        getToken("https://api.cn.ronghub.com/user/getToken.json", String.valueOf(myUser.getObjectId()), String.valueOf(myUser.getUsername()), "http://img2.imgtn.bdimg.com/it/u=3942935399,659074957&fm=21&gp=0.jpg");
+                                    Logger.i("正在获取token");
+                                    //连接融云服务器
+                                    connect(TOKEN);
 
+                                }
+                            }.start();
                         }
 
 
@@ -174,21 +151,18 @@ public class LoginActivity extends BaseActivity {
         }
     }
 
-   /* OkHttpClient client = new OkHttpClient();
+    OkHttpClient client = new OkHttpClient();
 
-    String getToken(String url, String userId, String username,String img_avater) throws IOException {
-
+    String getToken(String url, String userId, String username, String img_avater) throws IOException {
         RequestBody body = new FormEncodingBuilder()
                 .add("userId", userId)
                 .add("name", username)
-                .add("portraitUri", "")//请求参数有错-------------------待修正----------------------------------------------
+                .add("portraitUri", img_avater)//请求参数有错-------------------待修正----------------------------------------------
                 .build();
-
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
                 .build();
-
         Response response = client.newCall(request).execute();
         if (response.isSuccessful()) {
             Logger.i("获取token成功" + response.body().string());
@@ -199,7 +173,8 @@ public class LoginActivity extends BaseActivity {
             Logger.i("获取token失败" + response.body().string());
             throw new IOException("Unexpected code " + response);
         }
-    }*/
+    }
+
 
     private void connect(String token) {
 
@@ -241,7 +216,7 @@ public class LoginActivity extends BaseActivity {
                             for (Friend i : userIdList) {
                                 if (i.getFriend_id().equals(userId)) {
 
-                                    Logger.d(i.getFriend_name().toString()+"/////"+i.getFriend_avater().toString());
+                                    Logger.d(i.getFriend_name().toString() + "/////" + i.getFriend_avater().toString());
                                     return new UserInfo(i.getFriend_id(), i.getFriend_name(), Uri.parse(i.getFriend_avater()));
                                 }
                             }

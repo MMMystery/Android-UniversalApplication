@@ -2,8 +2,6 @@ package com.example.administrator.myuniversaltoolapplication.ui.adapter;
 
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +10,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.Post;
-import com.example.administrator.myuniversaltoolapplication.ui.fragment.FriendPostFragment;
 import com.example.administrator.myuniversaltoolapplication.utils.DateUtils;
-import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -28,11 +23,14 @@ import cn.bmob.v3.datatype.BmobFile;
 /**
  * Created by Administrator on 2016/2/18.
  */
-public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRecyclerAdapter.MyViewHolder> implements View.OnClickListener {
+public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRecyclerAdapter.MyViewHolder> {
     private List<Post> postDatasList;
     private Context context;
 
-    private OnRecyclerViewItemClickListener mOnItemClickListener = null;
+    private OnRecyclerViewItemClickListener mOnItemClickListener;
+    public void setOnRecyclerViewItemClickListener(OnRecyclerViewItemClickListener mOnItemClickListener){
+        this.mOnItemClickListener = mOnItemClickListener;
+    }
 
     public FriendPostRecyclerAdapter(Context context, List<Post> postDatasList) {
         this.postDatasList = postDatasList;
@@ -40,8 +38,8 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
     }
 
     //define interface
-    public static interface OnRecyclerViewItemClickListener {
-        void onItemClick(View view, String data);
+    public interface OnRecyclerViewItemClickListener {
+        void onItemClick(View view, int position);
     }
 
     @Override
@@ -49,13 +47,11 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_friendpost, viewGroup, false);//后面这个false不能少
         MyViewHolder myViewHolder = new MyViewHolder(context, view);
 
-        //将创建的View注册点击事件
-        view.setOnClickListener(this);
         return myViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(FriendPostRecyclerAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(final FriendPostRecyclerAdapter.MyViewHolder holder, int position) {
         Post postDatas = postDatasList.get(position);
         Picasso.with(context).load(postDatas.getAuthor().getAvater().getFileUrl(context)).into(holder.iv_avater);
 
@@ -65,8 +61,6 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
             for (int i = 0; i < postDatas.getImgfilestr().length; i++) {
                 bmobFilesList.add(postDatas.getImgfilestr()[i]);
             }
-//            Logger.d("[[[[[[[[[[[[[[[[" + bmobFilesList.size() + "]]]]]]]]]]" + bmobFilesList.get(0) + "---" + bmobFilesList.get(1)
-//                    + "---" + bmobFilesList.get(2) + "---" + bmobFilesList.get(3) + "---" + bmobFilesList.get(4));
             holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(context, bmobFilesList);
             holder.gv_photo.setAdapter(holder.friendPostRecyclerPhotoAdapter);
         } else {
@@ -78,8 +72,17 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
         holder.tv_likeNum.setText(postDatas.getLikeNum().toString());
         holder.tv_creattime.setText(DateUtils.getTimestampString(postDatas.getCreatTime()));
 
-        //将数据保存在itemView的Tag中，以便点击时进行获取
-        holder.itemView.setTag(postDatasList.get(position));
+
+        if(mOnItemClickListener!=null){
+            holder.itemView.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    int position = holder.getPosition();
+                    mOnItemClickListener.onItemClick(holder.itemView,position);
+                }
+            });
+        }
     }
 
     @Override
@@ -104,17 +107,6 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
             tv_likeNum = (TextView) itemView.findViewById(R.id.friendpostfragment_item_tv_likeNum);
             tv_creattime = (TextView) itemView.findViewById(R.id.friendpostfragment_item_tv_creattime);
         }
-    }
-
-    public void onClick(View v) {
-        if (mOnItemClickListener != null) {
-            //注意这里使用getTag方法获取数据
-            mOnItemClickListener.onItemClick(v, (String) v.getTag());
-        }
-    }
-
-    public void setOnItemClickListener(OnRecyclerViewItemClickListener listener) {
-        this.mOnItemClickListener = listener;
     }
 
 }

@@ -4,11 +4,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
@@ -18,7 +16,6 @@ import com.example.administrator.myuniversaltoolapplication.utils.DateUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,7 +63,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
         //添加动画
         rv_RecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        rv_RecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
+//        rv_RecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
         rv_RecyclerView.setLaodingMoreProgressStyle(ProgressStyle.BallRotate);
         rv_RecyclerView.setArrowImageView(R.mipmap.arrow_refresh);
         rv_RecyclerView.setLoadingListener(this);
@@ -74,8 +71,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
         postDatasList = new ArrayList<Post>();
         myRecyclerAdapter = new FriendPostRecyclerAdapter(getActivity(), postDatasList);
         rv_RecyclerView.setAdapter(myRecyclerAdapter);
-        myRecyclerAdapter.setOnItemClickListener(this);
-
+        myRecyclerAdapter.setOnRecyclerViewItemClickListener(this);
 
     }
 
@@ -118,12 +114,6 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
         });
 
     }
-
-    @Override
-    public void onItemClick(View view, String data) {
-        ToastUtils.show(getActivity(), data);
-    }
-
 
     //刷新加载事件
     @Override
@@ -207,5 +197,11 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                 ToastUtils.show(getActivity(), "查询失败:" + msg);
             }
         });
+    }
+
+    @Override
+    public void onItemClick(View view, int position) {
+
+        ToastUtils.show(getActivity(),"item"+ position);
     }
 }

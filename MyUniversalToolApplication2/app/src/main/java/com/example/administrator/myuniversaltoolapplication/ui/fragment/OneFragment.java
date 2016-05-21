@@ -28,8 +28,9 @@ import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imlib.model.Conversation;
 
 
-public class OneFragment extends Fragment implements View.OnClickListener{
+public class OneFragment extends Fragment implements View.OnClickListener {
     private Button topBar_btn_left, topBar_btn_right;
+    private TextView topBar_tv_title;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -128,14 +129,15 @@ public class OneFragment extends Fragment implements View.OnClickListener{
     }
 
 
-
     private void initView(View view) {
         topBar_btn_left = (Button) view.findViewById(R.id.topbar_btn_left);
         topBar_btn_right = (Button) view.findViewById(R.id.topbar_btn_right);
+        topBar_tv_title = (TextView) view.findViewById(R.id.topbar_tv_title);
         topBar_btn_left.setOnClickListener(this);
         topBar_btn_right.setOnClickListener(this);
         topBar_btn_left.setVisibility(View.GONE);
         topBar_btn_right.setBackgroundResource(R.mipmap.bar_contacts);
+        topBar_tv_title.setText("聊天");
     }
 
     @Override

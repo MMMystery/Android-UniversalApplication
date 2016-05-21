@@ -16,12 +16,12 @@
         <RadioButton
             android:id="@+id/mainactivity_btn_btn1"
             android:layout_width="0dp"
-            android:layout_height="34dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:background="@drawable/select_mainactivity_btn1"
             android:button="@null"
             />
@@ -42,12 +42,12 @@
         <RadioButton
             android:id="@+id/mainactivity_btn_btn3"
             android:layout_width="0dp"
-            android:layout_height="34dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:background="@drawable/select_mainactivity_btn3"
             android:button="@null"
             />
@@ -68,12 +68,12 @@
         <RadioButton
             android:id="@+id/mainactivity_btn_btn5"
             android:layout_width="0dp"
-            android:layout_height="34dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:background="@drawable/select_mainactivity_btn5"
             android:button="@null"
             />
