@@ -1,15 +1,14 @@
 package com.example.administrator.myuniversaltoolapplication.ui.adapter;
 
+
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.example.administrator.myuniversaltoolapplication.R;
-import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -19,53 +18,40 @@ import cn.bmob.v3.datatype.BmobFile;
 /**
  * Created by Administrator on 2016/2/21.
  */
-public class FriendPostRecyclerPhotoAdapter extends BaseAdapter {
+public class FriendPostRecyclerPhotoAdapter extends RecyclerView.Adapter<FriendPostRecyclerPhotoAdapter.MyViewHolder> {
     private ArrayList<BmobFile> bmobFilesList;
     private Context context;
-    private GridView gv_photo;
 
-    public FriendPostRecyclerPhotoAdapter(GridView gv_photo, Context context, ArrayList<BmobFile> bmobFilesList) {
+    public FriendPostRecyclerPhotoAdapter( Context context, ArrayList<BmobFile> bmobFilesList) {
         this.context = context;
         this.bmobFilesList = bmobFilesList;
-        this.gv_photo = gv_photo;
     }
 
     @Override
-    public int getCount() {
+    public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_friendpost_photos, viewGroup, false);//后面这个false不能少
+        MyViewHolder myViewHolder = new MyViewHolder(context, view);
+        return myViewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        Picasso.with(context).load(bmobFilesList.get(position).getFileUrl(context)).into(holder.iv_photo);
+    }
+
+    @Override
+    public int getItemCount() {
         return bmobFilesList.size();
     }
 
-    @Override
-    public Object getItem(int position) {
-        return bmobFilesList.get(position);
-    }
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-        if (convertView == null) {
-            holder = new ViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.item_friendpost_photos, null);
+        private ImageView iv_photo;
 
-            holder.iv_photo = (ImageView) convertView.findViewById(R.id.friendpostfragmentphoto_item_iv_photo);
-
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
+        public MyViewHolder(Context context, View itemView) {
+            super(itemView);
+            iv_photo = (ImageView) itemView.findViewById(R.id.friendpostfragmentphoto_item_iv_photo);
         }
-        Picasso.with(context).load(bmobFilesList.get(position).getFileUrl(context)).into(holder.iv_photo);
-        Logger.d("-----------------" + position + "---------------------");
-        return convertView;
-    }
-
-    class ViewHolder {
-
-        public ImageView iv_photo;
-
     }
 }

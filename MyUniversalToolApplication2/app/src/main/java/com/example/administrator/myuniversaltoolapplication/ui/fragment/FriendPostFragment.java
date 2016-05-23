@@ -8,7 +8,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
@@ -43,7 +42,6 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_friend_post, container, false);
-        getActivity().getWindow().addFlags(Window.FEATURE_NO_TITLE);
 
         initView(view);
 
