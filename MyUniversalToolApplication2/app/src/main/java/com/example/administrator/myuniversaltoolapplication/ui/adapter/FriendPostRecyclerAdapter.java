@@ -61,7 +61,7 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
             for (int i = 0; i < postDatas.getImgfilestr().length; i++) {
                 bmobFilesList.add(postDatas.getImgfilestr()[i]);
             }
-            holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(context, bmobFilesList);
+            holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(holder.gv_photo,context, bmobFilesList);
             holder.gv_photo.setAdapter(holder.friendPostRecyclerPhotoAdapter);
         } else {
             holder.gv_photo.setVisibility(View.GONE);//如果没有图片列表，就隐藏掉gridview

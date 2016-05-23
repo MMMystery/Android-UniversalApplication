@@ -119,8 +119,6 @@ public class LoginActivity extends BaseActivity {
                                 @Override
                                 public void run() {
                                     super.run();
-
-
 //                                        getToken("https://api.cn.ronghub.com/user/getToken.json", String.valueOf(myUser.getObjectId()), String.valueOf(myUser.getUsername()), "http://img2.imgtn.bdimg.com/it/u=3942935399,659074957&fm=21&gp=0.jpg");
                                     Logger.i("正在获取token");
                                     //连接融云服务器

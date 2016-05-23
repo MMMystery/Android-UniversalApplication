@@ -1,5 +1,6 @@
 package com.example.administrator.myuniversaltoolapplication.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -7,10 +8,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
 import com.example.administrator.myuniversaltoolapplication.entity.Post;
+import com.example.administrator.myuniversaltoolapplication.ui.activity.DetailPostActivity;
 import com.example.administrator.myuniversaltoolapplication.ui.adapter.FriendPostRecyclerAdapter;
 import com.example.administrator.myuniversaltoolapplication.utils.DateUtils;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
@@ -40,6 +43,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_friend_post, container, false);
+        getActivity().getWindow().addFlags(Window.FEATURE_NO_TITLE);
 
         initView(view);
 
@@ -113,6 +117,25 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
             }
         });
 
+    }
+
+
+    @Override
+    public void onItemClick(View view, int position) {
+
+        ToastUtils.show(getActivity(),postDatasList.get(position-1).getContent());
+        Intent intent = new Intent(getActivity(), DetailPostActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("avater",postDatasList.get(position-1).getAuthor().getAvater().getFileUrl(getActivity()));
+        bundle.putString("author",postDatasList.get(position-1).getAuthor().getUsername());
+        bundle.putString("content",postDatasList.get(position-1).getContent());
+        bundle.putInt("commentNum",postDatasList.get(position-1).getCommentNum());
+        bundle.putInt("likeNum",postDatasList.get(position-1).getLikeNum());
+        bundle.putString("creattime",DateUtils.getTimestampString(postDatasList.get(position-1).getCreatTime()));
+
+        intent.putExtras(bundle);
+//        intent.putExtra("postDatasList",postDatasList.get(position-1));
+        startActivity(intent);
     }
 
     //刷新加载事件
@@ -199,9 +222,4 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
         });
     }
 
-    @Override
-    public void onItemClick(View view, int position) {
-
-        ToastUtils.show(getActivity(),"item"+ position);
-    }
 }

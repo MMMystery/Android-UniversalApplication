@@ -10,10 +10,8 @@ import android.widget.RadioGroup;
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.ui.adapter.MyFragPagerAdapter;
 import com.example.administrator.myuniversaltoolapplication.ui.fragment.FiveFragment;
-import com.example.administrator.myuniversaltoolapplication.ui.fragment.FourFragment;
 import com.example.administrator.myuniversaltoolapplication.ui.fragment.OneFragment;
 import com.example.administrator.myuniversaltoolapplication.ui.fragment.ThreeFragment;
-import com.example.administrator.myuniversaltoolapplication.ui.fragment.TwoFragment;
 
 import java.util.ArrayList;
 
@@ -45,7 +43,16 @@ public class MainActivity extends BaseActivity implements  View.OnClickListener,
         initView();
 
     }
-
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        super.onWindowFocusChanged(hasFocus);
+//        if (hasFocus) {
+//            decorView.setSystemUiVisibility(
+//                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);}
 
     public void initView() {
         btn1 = (RadioButton) findViewById(R.id.mainactivity_btn_btn1);

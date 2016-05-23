@@ -97,7 +97,9 @@
             android:name=".ui.activity.DiscoverActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.activity.DetailPostActivity"></activity>
+        <activity android:name=".ui.activity.DetailPostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ui.activity.NewPostActivity"
             android:screenOrientation="portrait"
