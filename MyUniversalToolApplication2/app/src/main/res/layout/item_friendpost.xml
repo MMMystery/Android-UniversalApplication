@@ -31,11 +31,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/friendpostfragment_item_tv_name"
             android:text="contentXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
-        <com.jcodecraeer.xrecyclerview.XRecyclerView
-            android:id="@+id/friendpostfragment_item_rv_photo"
+        <com.example.administrator.myuniversaltoolapplication.ui.view.MyGridView
+            android:id="@+id/friendpostfragment_item_gv_photo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </com.jcodecraeer.xrecyclerview.XRecyclerView>
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="16dp"
+            android:numColumns="3"
+            android:verticalSpacing="16dp">
+        </com.example.administrator.myuniversaltoolapplication.ui.view.MyGridView>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
