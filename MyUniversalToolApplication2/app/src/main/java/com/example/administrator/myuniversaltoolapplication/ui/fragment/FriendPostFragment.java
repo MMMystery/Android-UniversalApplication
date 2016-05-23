@@ -34,7 +34,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
     private XRecyclerView rv_RecyclerView;
     private List<Post> postDatasList;
     private Post postDatas;
-    private FriendPostRecyclerAdapter myRecyclerAdapter;
+    private FriendPostRecyclerAdapter friendPostRecyclerAdapter;
 
 
     @Override
@@ -71,9 +71,10 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
         rv_RecyclerView.setLoadingListener(this);
 
         postDatasList = new ArrayList<Post>();
-        myRecyclerAdapter = new FriendPostRecyclerAdapter(getActivity(), postDatasList);
-        rv_RecyclerView.setAdapter(myRecyclerAdapter);
-        myRecyclerAdapter.setOnRecyclerViewItemClickListener(this);
+        friendPostRecyclerAdapter = new FriendPostRecyclerAdapter(getActivity(), postDatasList);
+        rv_RecyclerView.setAdapter(friendPostRecyclerAdapter);
+
+        friendPostRecyclerAdapter.setOnRecyclerViewItemClickListener(this);
 
     }
 
@@ -105,7 +106,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
                 //在这网络请求完成之前就setAdapter过了，不过最初是空的，然后获取数据下来后，再更新一遍数据就有显示了。
                 //这样的话就不需要网络请求完后才能做setAdapter这些操作了
 
-                myRecyclerAdapter.notifyDataSetChanged();
+                friendPostRecyclerAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -121,9 +122,10 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
     @Override
     public void onItemClick(View view, int position) {
 
-        ToastUtils.show(getActivity(),postDatasList.get(position-1).getContent());
         Intent intent = new Intent(getActivity(), DetailPostActivity.class);
         Bundle bundle = new Bundle();
+//        bundle.putString("postid",postDatasList.get(position-1).getObjectId());
+//        Logger.d("postid",postDatasList.get(position-1).getObjectId());
         bundle.putString("avater",postDatasList.get(position-1).getAuthor().getAvater().getFileUrl(getActivity()));
         bundle.putString("author",postDatasList.get(position-1).getAuthor().getUsername());
         bundle.putString("content",postDatasList.get(position-1).getContent());
@@ -165,7 +167,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
 
                 //在这网络请求完成之前就setAdapter过了，不过最初是空的，然后获取数据下来后，再更新一遍数据就有显示了。
                 //这样的话就不需要网络请求完后才能做setAdapter这些操作了
-                myRecyclerAdapter.notifyDataSetChanged();
+                friendPostRecyclerAdapter.notifyDataSetChanged();
                 rv_RecyclerView.refreshComplete();//刷新完成，刷新动画去掉
                 pageNumber = 1;//刷新后，记住页码数要归为1
             }
@@ -207,7 +209,7 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
 
                 //在这网络请求完成之前就setAdapter过了，不过最初是空的，然后获取数据下来后，再更新一遍数据就有显示了。
                 //这样的话就不需要网络请求完后才能做setAdapter这些操作了
-                myRecyclerAdapter.notifyDataSetChanged();
+                friendPostRecyclerAdapter.notifyDataSetChanged();
                 rv_RecyclerView.loadMoreComplete();//加载完成，加载动画去掉
                 pageNumber++;//页码数+1
             }

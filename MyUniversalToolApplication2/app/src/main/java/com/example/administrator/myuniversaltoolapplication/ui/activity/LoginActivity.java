@@ -102,7 +102,7 @@ public class LoginActivity extends BaseActivity {
                         @Override
                         public void onSuccess() {
                             // TODO Auto-generated method stub
-                            ToastUtils.show(getApplicationContext(), "登录成功");
+
 
 //                            final String RM_Token_URL = "https://api.cn.ronghub.com/user/getToken.json";
                             String current_objectId = String.valueOf(myUser.getObjectId());
@@ -122,6 +122,8 @@ public class LoginActivity extends BaseActivity {
 //                                        getToken("https://api.cn.ronghub.com/user/getToken.json", String.valueOf(myUser.getObjectId()), String.valueOf(myUser.getUsername()), "http://img2.imgtn.bdimg.com/it/u=3942935399,659074957&fm=21&gp=0.jpg");
                                     Logger.i("正在获取token");
                                     //连接融云服务器
+//                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//                                    finish();
                                     connect(TOKEN);
 
                                 }
@@ -224,6 +226,7 @@ public class LoginActivity extends BaseActivity {
 
                     }, true);
 
+                    ToastUtils.show(getApplicationContext(), "登录成功");
                     Logger.d("LoginActivity", "--onSuccess" + userid);
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     finish();

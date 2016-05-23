@@ -44,7 +44,7 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
     }
 
     @Override
-    public FriendPostRecyclerAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_friendpost, viewGroup, false);//后面这个false不能少
         MyViewHolder myViewHolder = new MyViewHolder(context, view);
 
@@ -52,7 +52,7 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
     }
 
     @Override
-    public void onBindViewHolder(final FriendPostRecyclerAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
         Post postDatas = postDatasList.get(position);
         Picasso.with(context).load(postDatas.getAuthor().getAvater().getFileUrl(context)).into(holder.iv_avater);
 

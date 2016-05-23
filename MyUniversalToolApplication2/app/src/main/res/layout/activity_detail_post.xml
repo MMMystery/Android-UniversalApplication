@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
-    android:orientation="vertical"
     >
 
-    <include layout="@layout/topbar_base" />
+    <include
+        android:id="@+id/detailpost_topbar"
+        layout="@layout/topbar_base" />
 
     <RelativeLayout
+        android:id="@+id/detailpost_rl_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/detailpost_topbar"
         >
 
         <ImageView
@@ -76,9 +79,11 @@
                     android:id="@+id/detailpost_ll_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/fab_margin_s"
                     android:layout_toLeftOf="@id/detailpost_ll_like"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="@dimen/fab_margin_s"
+                    android:layout_marginTop="@dimen/fab_margin_s"
+                    android:layout_marginBottom="@dimen/fab_margin_s">
 
                     <ImageView
                         android:layout_width="16dp"
@@ -92,7 +97,38 @@
                         android:layout_margin="@dimen/fab_margin_s"
                         android:text="11" />
                 </LinearLayout>
+
+
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailpost_ll_commentadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/detailpost_et_commentinput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="输入评论"/>
+        <Button
+            android:id="@+id/detailpost_bt_commentsend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发送"/>
+
+    </LinearLayout>
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/detailpost_rv_commment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/detailpost_ll_commentadd"
+        android:layout_below="@+id/detailpost_rl_detail">
+
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+</RelativeLayout>
