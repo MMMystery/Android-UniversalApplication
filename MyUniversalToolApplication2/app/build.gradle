@@ -61,6 +61,5 @@ dependencies {
     compile 'me.iwf.photopicker:PhotoPicker:0.1.8'
     //volley的jar包导入
 //   compile files('libs/Volley.jar')
-    //引入融云IMKit工具包
-    compile project(':IMKit')
+
 }

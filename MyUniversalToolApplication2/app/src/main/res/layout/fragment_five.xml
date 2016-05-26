@@ -23,7 +23,7 @@
             android:layout_height="64dp"
             android:layout_marginLeft="@dimen/fab_margin_left_s"
             android:id="@+id/fivefragment_iv_avater"
-            android:src="@drawable/rc_ic_camera"
+            android:src="@drawable/img_wechat"
             android:scaleType="centerCrop"/>
         <TextView
             android:layout_width="wrap_content"
