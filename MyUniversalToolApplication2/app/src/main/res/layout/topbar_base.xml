@@ -7,10 +7,11 @@
 
     <Button
         android:id="@+id/topbar_btn_left"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/fab_margin_left_m"/>
 
     <TextView
         android:id="@+id/topbar_tv_title"
@@ -22,9 +23,10 @@
 
     <Button
         android:id="@+id/topbar_btn_right"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_centerVertical="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/fab_margin_right_m"/>
 
 </RelativeLayout>

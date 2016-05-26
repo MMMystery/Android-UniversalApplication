@@ -17,7 +17,6 @@ import com.bmob.btp.callback.UploadBatchListener;
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
 import com.example.administrator.myuniversaltoolapplication.entity.Post;
-import com.example.administrator.myuniversaltoolapplication.utils.BitmapUtil;
 import com.example.administrator.myuniversaltoolapplication.utils.ToastUtils;
 import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;
@@ -64,6 +63,7 @@ public class NewPostActivity extends AppCompatActivity implements View.OnClickLi
         topBar_btn_right.setOnClickListener(this);
         bt_addphoto.setOnClickListener(this);
         topBar_btn_left.setBackgroundResource(R.mipmap.bar_back);
+        topBar_btn_right.setBackgroundResource(R.mipmap.bar_send);
 
 
     }

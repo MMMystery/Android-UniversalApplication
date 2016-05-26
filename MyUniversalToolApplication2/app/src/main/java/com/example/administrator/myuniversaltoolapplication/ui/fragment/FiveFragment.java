@@ -47,7 +47,7 @@ import cn.bmob.v3.listener.UpdateListener;
 public class FiveFragment extends Fragment implements View.OnClickListener {
     private ImageView iv_avater;
     private TextView tv_currentUserName;
-    private Button topBar_bt_right;
+    private Button topBar_btn_left,topBar_bt_right;
     private TextView topBar_tv_title;
     private LinearLayout ll_logout, ll_exit;
     private static final String IMAGE_FILE_NAME = "avatarImage.jpg";//拍完照的照片都給它定為這個名字
@@ -71,12 +71,15 @@ public class FiveFragment extends Fragment implements View.OnClickListener {
     private void initView(View view) {
         iv_avater = (ImageView) view.findViewById(R.id.fivefragment_iv_avater);
         tv_currentUserName = (TextView) view.findViewById(R.id.fivefragment_tv_currentUserName);
+        topBar_btn_left = (Button) view.findViewById(R.id.topbar_btn_left);
         topBar_bt_right = (Button) view.findViewById(R.id.topbar_btn_right);
         topBar_tv_title = (TextView)view.findViewById(R.id.topbar_tv_title);
         ll_logout = (LinearLayout) view.findViewById(R.id.fivefragment_ll_logout);
         ll_exit = (LinearLayout) view.findViewById(R.id.fivefragment_ll_exit);
         iv_avater.setOnClickListener(this);
-        topBar_bt_right.setOnClickListener(this);
+//        topBar_bt_right.setOnClickListener(this);
+        topBar_btn_left.setVisibility(View.GONE);
+        topBar_bt_right.setVisibility(View.GONE);
         ll_logout.setOnClickListener(this);
         ll_exit.setOnClickListener(this);
         topBar_tv_title.setText("个人中心");

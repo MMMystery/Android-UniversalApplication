@@ -37,7 +37,7 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         topBar_btn_left.setOnClickListener(this);
         topBar_btn_right.setOnClickListener(this);
         topBar_btn_left.setVisibility(View.GONE);
-        topBar_btn_right.setBackgroundResource(R.mipmap.bar_contacts);
+        topBar_btn_right.setBackgroundResource(R.mipmap.bar_friends);
         topBar_tv_title.setText("聊天");
     }
 
