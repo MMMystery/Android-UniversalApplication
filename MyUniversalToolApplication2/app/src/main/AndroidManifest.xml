@@ -2,14 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.myuniversaltoolapplication">
 
-
-    <!--网络权限 -->
+    <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 获取机型信息权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
-    <!-- sd卡存储-->
+    <!-- sd卡存储 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -61,7 +60,15 @@
             android:name=".ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.activity.ContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.NewFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ui.activity.DiscoverActivity"
             android:screenOrientation="portrait"
@@ -80,12 +87,13 @@
         <activity
             android:name="me.iwf.photopicker.PhotoPagerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <!--bmob即时通讯-->
+        <!-- bmob即时通讯开始 -->
 
         <meta-data
             android:name="Bmob_APP_KEY"
             android:value="4ae7abfd4c36023e0cdc426d39a5ee42" />
-   <!--     <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver">
+
+        <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver">
             <intent-filter>
                 <action android:name="cn.bmob.action.RECONNECT" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -93,6 +101,7 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
+
         <service
             android:name="cn.bmob.newim.core.service.BmobImService"
             android:process=":bmobcore" />
@@ -101,7 +110,11 @@
             android:name="cn.bmob.newim.core.service.NotifyService"
             android:process=":bmobcore" />
         <service android:name="cn.bmob.newim.core.service.ReConnectService" />
-        <service android:name="cn.bmob.newim.core.service.HeartBeatService" />-->
+        <service android:name="cn.bmob.newim.core.service.HeartBeatService" />
+
+        <!-- bmob即时通讯结束 -->
+
+
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -109,6 +122,7 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
 
     </application>
 

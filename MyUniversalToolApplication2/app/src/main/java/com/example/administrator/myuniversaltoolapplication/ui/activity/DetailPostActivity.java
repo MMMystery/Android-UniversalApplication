@@ -2,7 +2,6 @@ package com.example.administrator.myuniversaltoolapplication.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
@@ -31,7 +30,7 @@ import cn.bmob.v3.datatype.BmobPointer;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 
-public class DetailPostActivity extends AppCompatActivity implements View.OnClickListener, XRecyclerView.LoadingListener {
+public class DetailPostActivity extends BaseActivity implements View.OnClickListener, XRecyclerView.LoadingListener {
     private List<Comment> commentDatasList;
     private Comment commentDatas;
     private ImageView iv_avater;

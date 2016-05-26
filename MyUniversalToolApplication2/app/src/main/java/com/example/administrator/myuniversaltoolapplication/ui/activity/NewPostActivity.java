@@ -3,7 +3,6 @@ package com.example.administrator.myuniversaltoolapplication.ui.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +30,7 @@ import cn.bmob.v3.listener.SaveListener;
 import me.iwf.photopicker.PhotoPickerActivity;
 import me.iwf.photopicker.utils.PhotoPickerIntent;
 
-public class NewPostActivity extends AppCompatActivity implements View.OnClickListener {
+public class NewPostActivity extends BaseActivity implements View.OnClickListener {
     public final static int REQUEST_CODE = 100;
     private Button topBar_btn_left, topBar_btn_right;
     private Button bt_addphoto;

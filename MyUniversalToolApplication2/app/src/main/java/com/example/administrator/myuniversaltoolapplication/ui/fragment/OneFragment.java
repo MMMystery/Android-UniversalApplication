@@ -1,5 +1,6 @@
 package com.example.administrator.myuniversaltoolapplication.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.myuniversaltoolapplication.R;
+import com.example.administrator.myuniversaltoolapplication.ui.activity.ContactActivity;
 
 
 public class OneFragment extends Fragment implements View.OnClickListener {
@@ -48,6 +50,8 @@ public class OneFragment extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(), "left", Toast.LENGTH_LONG).show();
                 break;
             case R.id.topbar_btn_right:
+                Intent intent = new Intent(getActivity(), ContactActivity.class);
+                startActivity(intent);
                 break;
         }
 

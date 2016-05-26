@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="true"
-    android:fitsSystemWindows="true"
+
     >
 
     <include
@@ -14,6 +13,7 @@
         android:id="@+id/detailpost_rl_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/col_eeeeee"
         android:layout_below="@id/detailpost_topbar"
         >
 
@@ -113,14 +113,14 @@
             android:id="@+id/detailpost_et_commentinput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_weight="6"
             android:hint="输入评论"/>
         <Button
             android:id="@+id/detailpost_bt_commentsend"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="发送"/>
+            android:background="@mipmap/btn_send_selected"/>
 
     </LinearLayout>
     <com.jcodecraeer.xrecyclerview.XRecyclerView

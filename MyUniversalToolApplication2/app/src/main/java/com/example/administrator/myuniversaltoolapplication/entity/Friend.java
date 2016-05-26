@@ -1,40 +1,29 @@
 package com.example.administrator.myuniversaltoolapplication.entity;
 
+import cn.bmob.v3.BmobObject;
+
 /**
- * Created by Administrator on 2016/2/17.
+ * 好友表
+ * Created by Administrator on 2016/4/26.
  */
-public class Friend {
-    private String friend_id;
-    private String friend_name;
+public class Friend extends BmobObject {
 
-    public String getFriend_id() {
-        return friend_id;
+    private MyUser user;
+    private MyUser friendUser;
+
+    public MyUser getUser() {
+        return user;
     }
 
-    public void setFriend_id(String friend_id) {
-        this.friend_id = friend_id;
+    public void setUser(MyUser user) {
+        this.user = user;
     }
 
-    public String getFriend_name() {
-        return friend_name;
+    public MyUser getFriendUser() {
+        return friendUser;
     }
 
-    public void setFriend_name(String friend_name) {
-        this.friend_name = friend_name;
-    }
-
-    public String getFriend_avater() {
-        return friend_avater;
-    }
-
-    public void setFriend_avater(String friend_avater) {
-        this.friend_avater = friend_avater;
-    }
-
-    private String friend_avater;
-    public Friend(String friend_id,String friend_name,String friend_avater) {
-        this.friend_id = friend_id;
-        this.friend_name = friend_name;
-        this.friend_avater = friend_avater;
+    public void setFriendUser(MyUser friendUser) {
+        this.friendUser = friendUser;
     }
 }
