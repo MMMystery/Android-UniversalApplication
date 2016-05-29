@@ -31,6 +31,8 @@ import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 
 public class DetailPostActivity extends BaseActivity implements View.OnClickListener, XRecyclerView.LoadingListener {
+    private Button topBar_btn_left, topBar_btn_right;
+    private TextView tv_topBar_tv_title;
     private List<Comment> commentDatasList;
     private Comment commentDatas;
     private ImageView iv_avater;
@@ -50,7 +52,9 @@ public class DetailPostActivity extends BaseActivity implements View.OnClickList
     }
 
     private void initView() {
-
+        topBar_btn_left = (Button) findViewById(R.id.topbar_btn_left);
+        topBar_btn_right = (Button) findViewById(R.id.topbar_btn_right);
+        tv_topBar_tv_title = (TextView) findViewById(R.id.topbar_tv_title);
         iv_avater = (ImageView) findViewById(R.id.detailpost_iv_avater);
         tv_name = (TextView) findViewById(R.id.detailpost_tv_name);
         tv_content = (TextView) findViewById(R.id.detailpost_tv_content);
@@ -61,6 +65,9 @@ public class DetailPostActivity extends BaseActivity implements View.OnClickList
         et_commentinput = (EditText) findViewById(R.id.detailpost_et_commentinput);
         bt_commentsend = (Button) findViewById(R.id.detailpost_bt_commentsend);
         bt_commentsend.setOnClickListener(this);
+        tv_topBar_tv_title.setText("评论");
+        topBar_btn_left.setBackgroundResource(R.mipmap.bar_back);
+        topBar_btn_right.setVisibility(View.GONE);
 
         // 创建一个线性布局管理器
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -100,9 +107,9 @@ public class DetailPostActivity extends BaseActivity implements View.OnClickList
         tv_creattime.setText(creattime);
         tv_commentNum.setText(String.valueOf(commentNum));
         tv_likeNum.setText(String.valueOf(likeNum));
-if(postid != null){
-    initDatas();
-}
+        if (postid != null) {
+            initDatas();
+        }
 
 
     }
@@ -126,7 +133,6 @@ if(postid != null){
                     commentDatas = new Comment();//几组数据就得new几次
                     commentDatas.setUser(datasList.getUser());
                     commentDatas.setContent(datasList.getContent());
-
                     commentDatasList.add(commentDatas);//每一组数据也都得加到List当中去
                 }
 
@@ -149,7 +155,7 @@ if(postid != null){
             case R.id.detailpost_bt_commentsend:
                 MyUser user = BmobUser.getCurrentUser(this, MyUser.class);
                 Post post = new Post();
-                post.setObjectId("50d47264ac");
+                post.setObjectId(getIntent().getExtras().getString("postid"));
                 commentDatas = new Comment();
                 commentDatas.setPost(post);
                 commentDatas.setContent(et_commentinput.getText().toString());
@@ -171,6 +177,9 @@ if(postid != null){
                     }
                 });
                 break;
+            case R.id.topbar_btn_left:
+                this.finish();
+                break;
             default:
                 break;
         }
@@ -181,7 +190,7 @@ if(postid != null){
         BmobQuery<Comment> query = new BmobQuery<Comment>();
 //用此方式可以构造一个BmobPointer对象。只需要设置objectId就行
         Post post = new Post();
-        post.setObjectId("50d47264ac");
+        post.setObjectId(getIntent().getExtras().getString("postid"));
         query.addWhereEqualTo("post", new BmobPointer(post));
 //希望同时查询该评论的发布者的信息，以及该帖子的作者的信息，这里用到上面`include`的并列对象查询和内嵌对象的查询
         query.include("user,post.author");
@@ -220,7 +229,7 @@ if(postid != null){
         BmobQuery<Comment> query = new BmobQuery<Comment>();
 //用此方式可以构造一个BmobPointer对象。只需要设置objectId就行
         Post post = new Post();
-        post.setObjectId("50d47264ac");
+        post.setObjectId(getIntent().getExtras().getString("postid"));
         query.addWhereEqualTo("post", new BmobPointer(post));
 //希望同时查询该评论的发布者的信息，以及该帖子的作者的信息，这里用到上面`include`的并列对象查询和内嵌对象的查询
         query.include("user,post.author");

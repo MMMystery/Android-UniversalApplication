@@ -51,4 +51,7 @@ public class AppConstants {
 
     }
 
+    //好友请求：未读-未添加-接收到的初始状态
+    public static final int STATUS_VERIFY_NONE=0;
+
 }

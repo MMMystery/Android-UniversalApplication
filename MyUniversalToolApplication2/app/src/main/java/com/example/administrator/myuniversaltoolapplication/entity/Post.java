@@ -1,7 +1,6 @@
 package com.example.administrator.myuniversaltoolapplication.entity;
 
 import java.util.Date;
-import java.util.List;
 
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobFile;
@@ -12,6 +11,7 @@ import cn.bmob.v3.datatype.BmobRelation;
  */
 public class Post extends BmobObject {
 
+    private String postid;
     private String content;// 帖子内容
     private BmobFile[] imgfilestr; //图片数组
     private MyUser author;//帖子的发布者，这里体现的是一对一的关系，该帖子属于某个用户
@@ -19,6 +19,14 @@ public class Post extends BmobObject {
     private Integer likeNum;//点赞数
     private Integer commentNum;//评论数
     private Date creatTime;//评论数
+
+    public String getPostid() {
+        return postid;
+    }
+
+    public void setPostid(String postid) {
+        this.postid = postid;
+    }
 
     public Date getCreatTime() {
         return creatTime;

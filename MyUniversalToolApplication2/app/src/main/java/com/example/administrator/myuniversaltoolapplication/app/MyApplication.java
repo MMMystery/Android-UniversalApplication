@@ -24,6 +24,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         //LeakCanary注册
         mRefWatcher = LeakCanary.install(this);
         //Bmob注册

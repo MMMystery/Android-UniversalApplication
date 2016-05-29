@@ -104,6 +104,7 @@ public class ThreeFragment extends Fragment implements View.OnClickListener,Frie
                 for (Post datasList : object) {
                     postDatas = new Post();//几组数据就得new几次
                     postDatas.setAuthor(datasList.getAuthor());
+                    postDatas.setPostid(datasList.getObjectId());
                     postDatas.setContent(datasList.getContent());
                     postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
@@ -133,7 +134,7 @@ public class ThreeFragment extends Fragment implements View.OnClickListener,Frie
 
         Intent intent = new Intent(getActivity(), DetailPostActivity.class);
         Bundle bundle = new Bundle();
-//        bundle.putString("postid",postDatasList.get(position-1).getObjectId());
+        bundle.putString("postid",postDatasList.get(position-1).getPostid());
 //        Logger.d("postid",postDatasList.get(position-1).getObjectId());
         bundle.putString("avater",postDatasList.get(position-1).getAuthor().getAvater().getFileUrl(getActivity()));
         bundle.putString("author",postDatasList.get(position-1).getAuthor().getUsername());
@@ -166,6 +167,7 @@ public class ThreeFragment extends Fragment implements View.OnClickListener,Frie
                 for (Post datasList : object) {
                     postDatas = new Post();//几组数据就得new几次
                     postDatas.setAuthor(datasList.getAuthor());
+                    postDatas.setPostid(datasList.getObjectId());
                     postDatas.setContent(datasList.getContent());
                     postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());
@@ -208,6 +210,7 @@ public class ThreeFragment extends Fragment implements View.OnClickListener,Frie
                 for (Post datasList : object) {
                     postDatas = new Post();//几组数据就得new几次
                     postDatas.setAuthor(datasList.getAuthor());
+                    postDatas.setPostid(datasList.getObjectId());
                     postDatas.setContent(datasList.getContent());
                     postDatas.setImgfilestr(datasList.getImgfilestr());
                     postDatas.setCommentNum(datasList.getCommentNum());

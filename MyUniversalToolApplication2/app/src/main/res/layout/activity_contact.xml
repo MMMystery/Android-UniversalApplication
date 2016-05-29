@@ -8,10 +8,15 @@
     <include
         layout="@layout/topbar_base"/>
     <Button
-        android:id="@+id/contactacitivity_bt_newfriend"
+        android:id="@+id/contactacitivity_bt_addfriend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="添加亲人"/>
+    <Button
+        android:id="@+id/contactacitivity_bt_newfriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新添加"/>
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/contactacitivity_sw_refresh"

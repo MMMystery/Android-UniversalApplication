@@ -1,15 +1,26 @@
 package com.example.administrator.myuniversaltoolapplication.ui.activity;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.myuniversaltoolapplication.R;
+import com.example.administrator.myuniversaltoolapplication.entity.NewFriend;
+import com.example.administrator.myuniversaltoolapplication.ui.adapter.NewFriendAdapter;
+
+import java.util.List;
 
 public class NewFriendActivity extends BaseActivity implements View.OnClickListener{
     private Button topBar_bt_left,topBar_bt_right;
     private TextView topBar_tv_title;
+    private RecyclerView rv_searchfriend;
+    private SwipeRefreshLayout sw_refresh;
+    private NewFriendAdapter newFriendAdapter;
+    private List<NewFriend> newFriendDatasList;
+    private NewFriend newFriendDatas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
