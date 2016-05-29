@@ -4,30 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.administrator.myuniversaltoolapplication.ui.activity.ContactActivity">
-    <include
-        layout="@layout/topbar_base"/>
+    tools:context="com.example.administrator.myuniversaltoolapplication.ui.activity.ContactsActivity">
+
+    <include layout="@layout/topbar_base" />
+
     <Button
-        android:id="@+id/contactacitivity_bt_addfriend"
+        android:id="@+id/contactsacitivity_bt_addfriend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="添加亲人"/>
+        android:text="添加亲人" />
+
     <Button
-        android:id="@+id/contactacitivity_bt_newfriend"
+        android:id="@+id/contactsacitivity_bt_newfriend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="新添加"/>
+        android:text="新添加" />
 
     <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/contactacitivity_sw_refresh"
+        android:id="@+id/contactsacitivity_sw_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/col_eeeeee"
-        >
+        android:layout_height="match_parent">
+
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/contactactivity_rv_contacts"
+            android:id="@+id/contactsactivity_rv_contacts"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

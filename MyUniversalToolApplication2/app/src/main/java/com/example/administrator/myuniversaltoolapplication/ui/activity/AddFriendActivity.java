@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.entity.MyUser;
@@ -22,6 +23,8 @@ import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.FindListener;
 
 public class AddFriendActivity extends BaseActivity implements View.OnClickListener{
+    private Button topBar_btn_left, topBar_btn_right;
+    private TextView topBar_tv_title;
     private EditText et_search;
     private Button bt_search;
     private RecyclerView rv_searchfriend;
@@ -38,10 +41,17 @@ public class AddFriendActivity extends BaseActivity implements View.OnClickListe
     }
 
     private void initView() {
+        topBar_btn_left = (Button) findViewById(R.id.topbar_btn_left);
+        topBar_btn_right = (Button) findViewById(R.id.topbar_btn_right);
+        topBar_tv_title = (TextView) findViewById(R.id.topbar_tv_title);
         et_search = (EditText) findViewById(R.id.addfriendactivity_et_search);
         bt_search = (Button) findViewById(R.id.addfriendactivity_bt_search);
         rv_searchfriend = (RecyclerView) findViewById(R.id.addfriendactivity_rc_searchfriend);
         sw_refresh = (SwipeRefreshLayout) findViewById(R.id.addfriendactivity_sw_refresh);
+        topBar_btn_right.setVisibility(View.GONE);
+        topBar_btn_left.setBackgroundResource(R.mipmap.bar_back);
+        topBar_tv_title.setText("添加亲人");
+        topBar_btn_left.setOnClickListener(this);
         bt_search.setOnClickListener(this);
         // 创建一个线性布局管理器
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -55,6 +65,9 @@ public class AddFriendActivity extends BaseActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.topbar_btn_left:
+                this.finish();
+                break;
             case R.id.addfriendactivity_bt_search:
                     search();
                 break;

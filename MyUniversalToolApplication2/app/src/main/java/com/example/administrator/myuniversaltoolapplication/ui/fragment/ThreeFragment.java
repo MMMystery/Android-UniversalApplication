@@ -148,6 +148,11 @@ public class ThreeFragment extends Fragment implements View.OnClickListener,Frie
         startActivity(intent);
     }
 
+    @Override
+    public boolean onItemLongClick(View view, int position) {
+        return false;
+    }
+
     //刷新加载事件
     @Override
     public void onRefresh() {

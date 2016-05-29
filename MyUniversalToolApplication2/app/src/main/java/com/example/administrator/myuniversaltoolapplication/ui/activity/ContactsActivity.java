@@ -18,8 +18,8 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.FindListener;
 
-public class ContactActivity extends BaseActivity implements View.OnClickListener {
-    private RecyclerView rv_contacts;
+public class ContactsActivity extends BaseActivity implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
+        private RecyclerView rv_contacts;
     private SwipeRefreshLayout sw_refresh;
     private Button bt_newFriend, bt_addFriend;
     private Button topBar_bt_left, topBar_bt_right;
@@ -28,8 +28,7 @@ public class ContactActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact);
-
+        setContentView(R.layout.activity_contacts);
         initView();
     }
 
@@ -38,18 +37,41 @@ public class ContactActivity extends BaseActivity implements View.OnClickListene
         topBar_bt_left = (Button) findViewById(R.id.topbar_btn_left);
         topBar_bt_right = (Button) findViewById(R.id.topbar_btn_right);
         topBar_tv_title = (TextView) findViewById(R.id.topbar_tv_title);
-        bt_newFriend = (Button) findViewById(R.id.contactacitivity_bt_newfriend);
-        bt_addFriend = (Button) findViewById(R.id.contactacitivity_bt_addfriend);
-        rv_contacts = (RecyclerView) findViewById(R.id.contactactivity_rv_contacts);
-        sw_refresh = (SwipeRefreshLayout) findViewById(R.id.contactacitivity_sw_refresh);
+        bt_newFriend = (Button) findViewById(R.id.contactsacitivity_bt_newfriend);
+        bt_addFriend = (Button) findViewById(R.id.contactsacitivity_bt_addfriend);
+        rv_contacts = (RecyclerView) findViewById(R.id.contactsactivity_rv_contacts);
+        sw_refresh = (SwipeRefreshLayout) findViewById(R.id.contactsacitivity_sw_refresh);
         bt_newFriend.setOnClickListener(this);
         bt_addFriend.setOnClickListener(this);
         topBar_bt_left.setBackgroundResource(R.mipmap.bar_back);
         topBar_bt_right.setVisibility(View.GONE);
         topBar_tv_title.setText("联系人");
         topBar_bt_left.setOnClickListener(this);
+        sw_refresh.setEnabled(true);
+        sw_refresh.setOnRefreshListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.topbar_btn_left:
+                this.finish();
+                break;
+            case R.id.contactsacitivity_bt_addfriend:
+                Intent intent1 = new Intent(this, AddFriendActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.contactsacitivity_bt_newfriend:
+                Intent intent = new Intent(this, NewFriendActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
+    @Override
+    public void onRefresh() {
+        queryFriends();
+    }
 
     /**
      * 查询好友
@@ -73,22 +95,5 @@ public class ContactActivity extends BaseActivity implements View.OnClickListene
             }
         });
 
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.topbar_btn_left:
-                this.finish();
-                break;
-            case R.id.contactacitivity_bt_addfriend:
-                Intent intent1 = new Intent(this, AddFriendActivity.class);
-                startActivity(intent1);
-                break;
-            case R.id.contactacitivity_bt_newfriend:
-                Intent intent = new Intent(this, NewFriendActivity.class);
-                startActivity(intent);
-                break;
-        }
     }
 }

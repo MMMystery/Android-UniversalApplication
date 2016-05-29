@@ -28,11 +28,6 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
     private Context context;
 
 
-    private OnRecyclerViewItemClickListener mOnItemClickListener;
-    public void setOnRecyclerViewItemClickListener(OnRecyclerViewItemClickListener mOnItemClickListener){
-        this.mOnItemClickListener = mOnItemClickListener;
-    }
-
     public FriendPostRecyclerAdapter(Context context, List<Post> postDatasList) {
         this.postDatasList = postDatasList;
         this.context = context;
@@ -41,6 +36,13 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
     //define interface
     public interface OnRecyclerViewItemClickListener {
         void onItemClick(View view, int position);
+        boolean onItemLongClick(View view, int position);
+    }
+
+    private OnRecyclerViewItemClickListener mOnItemClickListener;
+
+    public void setOnRecyclerViewItemClickListener(OnRecyclerViewItemClickListener mOnItemClickListener) {
+        this.mOnItemClickListener = mOnItemClickListener;
     }
 
     @Override
@@ -62,7 +64,7 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
             for (int i = 0; i < postDatas.getImgfilestr().length; i++) {
                 bmobFilesList.add(postDatas.getImgfilestr()[i]);
             }
-            holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(holder.gv_photo,context, bmobFilesList);
+            holder.friendPostRecyclerPhotoAdapter = new FriendPostRecyclerPhotoAdapter(holder.gv_photo, context, bmobFilesList);
             holder.gv_photo.setAdapter(holder.friendPostRecyclerPhotoAdapter);
         } else {
             holder.gv_photo.setVisibility(View.GONE);//如果没有图片列表，就隐藏掉gridview
@@ -74,13 +76,14 @@ public class FriendPostRecyclerAdapter extends RecyclerView.Adapter<FriendPostRe
         holder.tv_creattime.setText(DateUtils.getTimestampString(postDatas.getCreatTime()));
 
 
-        if(mOnItemClickListener!=null){
-            holder.itemView.setOnClickListener(new View.OnClickListener(){
+        if (mOnItemClickListener != null) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
                     int position = holder.getPosition();
-                    mOnItemClickListener.onItemClick(holder.itemView,position);
+                    mOnItemClickListener.onItemClick(holder.itemView, position);
+                    mOnItemClickListener.onItemLongClick(holder.itemView, position);
                 }
             });
         }

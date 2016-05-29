@@ -138,6 +138,11 @@ public class FriendPostFragment extends Fragment implements FriendPostRecyclerAd
         startActivity(intent);
     }
 
+    @Override
+    public boolean onItemLongClick(View view, int position) {
+        return false;
+    }
+
     //刷新加载事件
     @Override
     public void onRefresh() {

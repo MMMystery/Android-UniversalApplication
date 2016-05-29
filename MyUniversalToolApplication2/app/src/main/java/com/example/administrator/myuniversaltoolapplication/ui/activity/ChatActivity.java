@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.administrator.myuniversaltoolapplication.R;
 import com.example.administrator.myuniversaltoolapplication.ui.adapter.ChatAdapter;
@@ -28,31 +29,42 @@ import cn.bmob.v3.exception.BmobException;
 /**
  * Created by y8042 on 2016/5/29.
  */
-public class ChatActivity extends BaseActivity{
+public class ChatActivity extends BaseActivity implements View.OnClickListener{
+    private Button topBar_btn_left, topBar_btn_right;
+    private TextView topBar_tv_title;
     private EditText edit_msg;
-    private Button btn_chat_send,btn_chat_keyboard,btn_chat_voice;
+    private Button btn_chat_send, btn_chat_keyboard, btn_chat_voice;
     private RecyclerView rc_view;
     BmobIMConversation c;
 
     ChatAdapter adapter;
     protected LinearLayoutManager layoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        c= BmobIMConversation.obtain(BmobIMClient.getInstance(), (BmobIMConversation) getIntent().getBundleExtra(getPackageName()).getSerializable("c"));
+        c = BmobIMConversation.obtain(BmobIMClient.getInstance(), (BmobIMConversation) getIntent().getBundleExtra(getPackageName()).getSerializable("c"));
         initView();
     }
 
     private void initView() {
+        topBar_btn_left = (Button) findViewById(R.id.topbar_btn_left);
+        topBar_btn_right = (Button) findViewById(R.id.topbar_btn_right);
+        topBar_tv_title = (TextView) findViewById(R.id.topbar_tv_title);
         edit_msg = (EditText) findViewById(R.id.edit_msg);
         btn_chat_send = (Button) findViewById(R.id.btn_chat_send);
         btn_chat_keyboard = (Button) findViewById(R.id.btn_chat_keyboard);
         btn_chat_voice = (Button) findViewById(R.id.btn_chat_voice);
         rc_view = (RecyclerView) findViewById(R.id.rc_view);
+        topBar_btn_right.setVisibility(View.GONE);
+        topBar_btn_left.setBackgroundResource(R.mipmap.bar_back);
+        topBar_tv_title.setText("聊天");
+        topBar_btn_left.setOnClickListener(this);
+
         layoutManager = new LinearLayoutManager(this);
         rc_view.setLayoutManager(layoutManager);
-        adapter = new ChatAdapter(this,c);
+        adapter = new ChatAdapter(this, c);
         rc_view.setAdapter(adapter);
         edit_msg.addTextChangedListener(new TextWatcher() {
             @Override
@@ -90,29 +102,30 @@ public class ChatActivity extends BaseActivity{
     }
 
     private void sendMessage() {
-        String text=edit_msg.getText().toString();
-        if(TextUtils.isEmpty(text.trim())){
-            ToastUtils.show(getApplicationContext(),"请输入内容");
+        String text = edit_msg.getText().toString();
+        if (TextUtils.isEmpty(text.trim())) {
+            ToastUtils.show(getApplicationContext(), "请输入内容");
             return;
         }
-        BmobIMTextMessage msg =new BmobIMTextMessage();
+        BmobIMTextMessage msg = new BmobIMTextMessage();
         msg.setContent(text);
         //可设置额外信息
-        Map<String,Object> map =new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
         map.put("level", "1");//随意增加信息
         msg.setExtraMap(map);
-        c.sendMessage(msg,listener);
+        c.sendMessage(msg, listener);
     }
+
     /**
      * 消息发送监听器
      */
-    public MessageSendListener listener =new MessageSendListener() {
+    public MessageSendListener listener = new MessageSendListener() {
 
         @Override
         public void onProgress(int value) {
             super.onProgress(value);
             //文件类型的消息才有进度值
-            Logger.i("onProgress："+value);
+            Logger.i("onProgress：" + value);
         }
 
         @Override
@@ -129,8 +142,17 @@ public class ChatActivity extends BaseActivity{
             edit_msg.setText("");
 //            scrollToBottom();
             if (e != null) {
-                ToastUtils.show(getApplicationContext(),e.getMessage());
+                ToastUtils.show(getApplicationContext(), e.getMessage());
             }
         }
     };
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+           case R.id.topbar_btn_left:
+               this.finish();
+               break;
+        }
+    }
 }
